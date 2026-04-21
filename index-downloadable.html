@@ -131,7 +131,7 @@
     .skip-link:focus { top: var(--space-4); }
 
     .container {
-      width: min(calc(100% - 2rem), 1200px);
+      width: min(calc(100% - 2rem), var(--content));
       margin-inline: auto;
     }
 
@@ -218,7 +218,7 @@
       display: inline-flex;
       align-items: center;
       gap: var(--space-2);
-      padding: 0.28rem 0.55rem; width: fit-content;
+      padding: 0.45rem 0.8rem;
       border-radius: var(--radius-full);
       background: var(--color-primary-highlight);
       color: var(--color-primary);
@@ -233,9 +233,8 @@
     }
     .hero-grid {
       display: grid;
-      grid-template-columns: minmax(0, 1.05fr) minmax(280px, 0.95fr);
-      gap: clamp(1.5rem, 4vw, 4rem);
-      align-items: start;
+      gap: var(--space-10);
+      align-items: end;
     }
     .hero-copy {
       display: grid;
@@ -244,15 +243,15 @@
     .hero h1 {
       margin: 0;
       font-family: var(--font-body);
-      font-size: clamp(2.2rem, 4.5vw, 4.8rem);
+      font-size: var(--text-3xl);
       line-height: 1.02;
       letter-spacing: -0.04em;
-      max-width: 22ch;
+      max-width: 11ch;
     }
     .hero-intro {
-      max-width: 100%;
+      max-width: 68ch;
       color: var(--color-text-muted);
-      font-size: clamp(1rem, 1.3vw, 1.25rem);
+      font-size: var(--text-lg);
     }
     .hero-actions {
       display: flex;
@@ -287,12 +286,18 @@
     .ghost-btn:hover { background: var(--color-surface-2); }
 
     .hero-panel {
-      padding: clamp(1.25rem, 2vw, 1.75rem);
+      background: linear-gradient(180deg, var(--color-surface-2), var(--color-surface));
+      border: 1px solid color-mix(in srgb, var(--color-text) 10%, transparent);
+      border-radius: var(--radius-xl);
+      padding: var(--space-6);
+      box-shadow: var(--shadow-md);
+      display: grid;
+      gap: var(--space-5);
     }
     .stat-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-      gap: 1rem;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: var(--space-4);
     }
     .stat {
       padding: var(--space-4);
@@ -301,19 +306,26 @@
       border: 1px solid color-mix(in srgb, var(--color-text) 8%, transparent);
     }
     .stat strong {
-      font-size: clamp(1.1rem, 1.6vw, 1.5rem);
+      display: block;
+      font-size: var(--text-xl);
+      line-height: 1;
+      margin-bottom: var(--space-2);
     }
-    .stat span,
+    .stat span {
+      color: var(--color-text-muted);
+      font-size: var(--text-sm);
+    }
     .mini-note {
-      font-size: clamp(0.92rem, 1.1vw, 1rem);
-      line-height: 1.6;
+      color: var(--color-text-muted);
+      font-size: var(--text-sm);
+      max-width: 38ch;
     }
 
     .section-head {
       display: grid;
       gap: var(--space-3);
       margin-bottom: var(--space-8);
-      max-width: 100%;
+      max-width: 64ch;
     }
     .section-head h2 {
       margin: 0;
@@ -332,7 +344,7 @@
     .projects-grid,
     .footer-grid {
       display: grid;
-      gap: var(--space-6);
+      gap: var(--space-4);
     }
 
     .card {
@@ -345,7 +357,6 @@
     .card h3 {
       margin: 0 0 var(--space-3);
       font-size: var(--text-lg);
-      max-width: 100%;
       line-height: 1.15;
     }
     .card p {
@@ -354,36 +365,28 @@
     }
 
     .about-text {
-      max-width: 100%;
+      max-width: var(--content-narrow);
       display: grid;
-      gap: 1rem;
-    }
-    .profile-lock {
-      display: grid;
-      grid-template-columns: 1fr;
       gap: var(--space-5);
-      max-width: 46rem;
     }
-    .profile-lock > * {
-      width: 100%;
-      min-width: 0;
-    }
-    .about-text p { 
-      font-size: clamp(1rem, 1.15vw, 1.1rem);
-      line-height: 1.7; }
+    .about-text p { margin: 0; }
     .about-highlight {
       display: flex;
       flex-wrap: wrap;
-      gap: .6rem;
+      gap: var(--space-2);
     }
     .chip {
-      font-size: clamp(0.78rem, 0.9vw, 0.88rem);
+      padding: 0.5rem 0.8rem;
+      border-radius: var(--radius-full);
+      background: var(--color-surface-offset);
+      border: 1px solid color-mix(in srgb, var(--color-text) 10%, transparent);
+      font-size: var(--text-xs);
+      font-weight: 600;
+      color: var(--color-text-muted);
     }
 
     .skills-grid {
-      grid-template-columns: 1fr;
-      gap: var(--space-5);
-      align-items: start;
+      grid-template-columns: repeat(1, minmax(0, 1fr));
     }
     .skill-list {
       display: flex;
@@ -394,7 +397,7 @@
 
     .timeline {
       display: grid;
-      gap: var(--space-6);
+      gap: var(--space-4);
       position: relative;
     }
     .timeline-item {
@@ -429,13 +432,11 @@
     }
 
     .projects-grid {
-      grid-template-columns: 1fr;
-      gap: var(--space-5);
-      align-items: start;
+      grid-template-columns: repeat(1, minmax(0, 1fr));
     }
     .project-card {
       display: grid;
-      gap: var(--space-6);
+      gap: var(--space-4);
     }
     .project-top {
       display: flex;
@@ -473,7 +474,7 @@
 
     .edu-grid {
       display: grid;
-      gap: var(--space-6);
+      gap: var(--space-4);
     }
     .edu-item {
       display: grid;
@@ -522,13 +523,6 @@
       transform: translateY(0);
     }
 
-    .about-grid {
-        grid-template-columns: 1fr !important;
-      }
-      .hero-grid {
-        grid-template-columns: 1fr !important;
-      }
-
     @media (min-width: 760px) {
       .nav { display: flex; }
       .menu-toggle { display: none; }
@@ -539,18 +533,12 @@
       .contact-card { grid-template-columns: 1.15fr 0.85fr; }
       .skills-grid,
       .projects-grid,
-      .edu-grid { grid-template-columns: 1fr;
-      gap: var(--space-5);
-      align-items: start; }
+      .edu-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     }
 
     @media (min-width: 1024px) {
-      .skills-grid { grid-template-columns: 1fr;
-      gap: var(--space-5);
-      align-items: start; }
-      .projects-grid { grid-template-columns: 1fr;
-      gap: var(--space-5);
-      align-items: start; }
+      .skills-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+      .projects-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
       .header-inner { min-height: 5rem; }
     }
   </style>
@@ -601,20 +589,20 @@
   <main id="content">
     <section class="hero" id="top">
       <div class="container hero-grid">
-        <div class="hero-copy reveal" style="max-width:100%; justify-content:center;">
+        <div class="hero-copy reveal">
           <span class="eyebrow eyebrow-tight">AI · Robotics · Automation · Data</span>
           <h1>Building practical AI systems for real-world engineering problems.</h1>
-          <p class="hero-intro" style="max-width:100%;">
+          <p class="hero-intro">
             Master’s student in Artificial Intelligence for Smart Sensors and Actuators with hands-on experience in machine learning, computer vision, robotics simulation, data analytics, automation, and software development. Comfortable across the full development cycle, from data preparation and prototyping to implementation, testing, and documentation.
           </p>
-          <div class="hero-actions" style="margin-top:.25rem;">
+          <div class="hero-actions">
             <a class="cta" href="#projects">View selected projects</a>
             <a class="ghost-btn" href="#contact">Download CV / Contact</a>
           </div>
         </div>
 
         <aside class="hero-panel reveal" aria-label="Profile highlights">
-          <div class="stat-grid" style="gap:1.1rem 1.1rem;">
+          <div class="stat-grid">
             <div class="stat">
               <strong>AI & ML</strong>
               <span>TensorFlow, Keras, computer vision, sequence models, anomaly detection</span>
@@ -641,18 +629,18 @@
 
     <section id="about">
       <div class="container about-grid">
-        <div class="section-head reveal" style="align-self:center;">
+        <div class="section-head reveal">
           <span class="eyebrow eyebrow-tight">Profile</span>
           <h2>Structured, practical, and responsible in how I build.</h2>
         </div>
-        <div class="about-text reveal" style="max-width:100%; justify-content:center; height:100%; text-align:left; display:grid; gap:1rem; align-content:center;">
+        <div class="about-text reveal">
           <p>
             I work best on practical, end-to-end systems that connect AI, software, and real-world applications. My background combines machine learning, robotics, automation, and data engineering, with experience moving from experimentation into usable technical prototypes.
           </p>
           <p>
             High initiative, fast onboarding, pragmatic problem solving, and responsible use of AI tools are central to how I work. I use AI tools responsibly to accelerate development, explore solutions faster, and improve the quality of results, while retaining full responsibility for implementation and validation.
           </p>
-          <div class="card" style="margin: 0 0 1.5rem; background: var(--color-primary-highlight); border-color: color-mix(in srgb, var(--color-primary) 20%, transparent); align-self:center; max-width: 520px;"><h3 style="margin:0 0 0.75rem;">Availability</h3><p style="margin:0; color: var(--color-text);">I am available on short notice, ready to start immediately, and willing to relocate if necessary.</p></div><div class="about-highlight" aria-label="Key working traits" style="gap:.6rem; flex-wrap:wrap; max-width:100%; justify-content:flex-start;">
+          <div class="card" style="margin: 0 0 1.5rem; background: var(--color-primary-highlight); border-color: color-mix(in srgb, var(--color-primary) 20%, transparent);"><h3 style="margin:0 0 0.75rem;">Availability</h3><p style="margin:0; color: var(--color-text);">I am available on short notice, ready to start immediately, and willing to relocate if necessary.</p></div><div class="about-highlight" aria-label="Key working traits">
             <span class="chip">High initiative</span>
             <span class="chip">Fast onboarding</span>
             <span class="chip">Pragmatic problem solving</span>
@@ -676,7 +664,7 @@
           <article class="card reveal">
             <h3>Programming & development</h3>
             <p>Python, C#, Bash, basic JavaScript, API-based workflows, Linux-based development, Git-driven collaboration.</p>
-            <div class="skill-list" style="margin-top:1rem; gap:.6rem;">
+            <div class="skill-list">
               <span class="chip">Python</span>
               <span class="chip">C#</span>
               <span class="chip">Bash</span>
@@ -688,7 +676,7 @@
           <article class="card reveal">
             <h3>AI & machine learning</h3>
             <p>Model development, evaluation, data preprocessing, image-based classification, sequence models, anomaly detection, and computer vision workflows.</p>
-            <div class="skill-list" style="margin-top:1rem; gap:.6rem;">
+            <div class="skill-list">
               <span class="chip">TensorFlow</span>
               <span class="chip">Keras</span>
               <span class="chip">PyTorch familiarity</span>
@@ -700,7 +688,7 @@
           <article class="card reveal">
             <h3>Data & analytics</h3>
             <p>Structured data analysis, PySpark pipelines, automation of data workflows, reproducible processing, and reporting-style outputs.</p>
-            <div class="skill-list" style="margin-top:1rem; gap:.6rem;">
+            <div class="skill-list">
               <span class="chip">PySpark</span>
               <span class="chip">Pandas</span>
               <span class="chip">NumPy</span>
@@ -712,7 +700,7 @@
           <article class="card reveal">
             <h3>Robotics & engineering</h3>
             <p>Robotics simulation, robot control, perception-to-action pipelines, motion planning, HSV-based detection, and ROS-based workflows.</p>
-            <div class="skill-list" style="margin-top:1rem; gap:.6rem;">
+            <div class="skill-list">
               <span class="chip">ROS1</span>
               <span class="chip">ROS2 familiarity</span>
               <span class="chip">MoveIt</span>
@@ -724,7 +712,7 @@
           <article class="card reveal">
             <h3>Tools & platforms</h3>
             <p>Development and prototyping across Dockerized environments, Jupyter workflows, Raspberry Pi, Ubuntu, and lightweight backend integration.</p>
-            <div class="skill-list" style="margin-top:1rem; gap:.6rem;">
+            <div class="skill-list">
               <span class="chip">Docker</span>
               <span class="chip">Ubuntu</span>
               <span class="chip">Jupyter</span>
@@ -736,7 +724,7 @@
           <article class="card reveal">
             <h3>Working style</h3>
             <p>Problem solving, rapid prototyping, documentation, disciplined implementation, and responsible use of AI tools to support quality and speed.</p>
-            <div class="skill-list" style="margin-top:1rem; gap:.6rem;">
+            <div class="skill-list">
               <span class="chip">Rapid prototyping</span>
               <span class="chip">Documentation</span>
               <span class="chip">Validation mindset</span>
@@ -759,7 +747,7 @@
           <article class="card project-card reveal">
             <div class="project-top">
               <h3>Diabetic Retinopathy Detection</h3>
-              <div class="tag-row" style="gap:.65rem; flex-wrap:wrap;"><span class="tag">Healthcare AI</span></div>
+              <div class="tag-row"><span class="tag">Healthcare AI</span></div>
             </div>
             <div class="project-block"><strong>Overview</strong><p>Developed an ML/DL-based system to detect diabetic retinopathy and estimate severity from medical image datasets.</p></div>
             <div class="project-block"><strong>Technologies</strong><p>Python, TensorFlow/Keras, image preprocessing, data augmentation.</p></div>
@@ -769,7 +757,7 @@
           <article class="card project-card reveal">
             <div class="project-top">
               <h3>Gesture-Based Access Control System</h3>
-              <div class="tag-row" style="gap:.65rem; flex-wrap:wrap;"><span class="tag">Computer Vision</span></div>
+              <div class="tag-row"><span class="tag">Computer Vision</span></div>
             </div>
             <div class="project-block"><strong>Overview</strong><p>Built a real-time gesture recognition system using webcam input and hand landmarks to classify gestures for access control.</p></div>
             <div class="project-block"><strong>Technologies</strong><p>Python, MediaPipe, OpenCV, TensorFlow/Keras, GRU, Tkinter, Flask.</p></div>
@@ -779,7 +767,7 @@
           <article class="card project-card reveal">
             <div class="project-top">
               <h3>IoT Anomaly Detection – PySpark Pipeline</h3>
-              <div class="tag-row" style="gap:.65rem; flex-wrap:wrap;"><span class="tag">Scalable Data</span></div>
+              <div class="tag-row"><span class="tag">Scalable Data</span></div>
             </div>
             <div class="project-block"><strong>Overview</strong><p>Created a scalable pipeline for processing large sensor datasets and detecting anomalies using statistical methods.</p></div>
             <div class="project-block"><strong>Technologies</strong><p>PySpark, Python, Docker, Linux, Z-score anomaly detection.</p></div>
@@ -789,7 +777,7 @@
           <article class="card project-card reveal">
             <div class="project-top">
               <h3>ROS-Based UR5 Robotic Arm Project</h3>
-              <div class="tag-row" style="gap:.65rem; flex-wrap:wrap;"><span class="tag">Robotics</span></div>
+              <div class="tag-row"><span class="tag">Robotics</span></div>
             </div>
             <div class="project-block"><strong>Overview</strong><p>Implemented a ROS-based UR5 robotic arm system in simulation with HSV-based object detection and pick-and-place-style motion planning.</p></div>
             <div class="project-block"><strong>Technologies</strong><p>ROS1, MoveIt, Gazebo, UR5 simulation, Python/C++, HSV segmentation, 2D camera, Ubuntu 16.04.</p></div>
@@ -799,7 +787,7 @@
           <article class="card project-card reveal">
             <div class="project-top">
               <h3>System Communication & Control with Edge Devices</h3>
-              <div class="tag-row" style="gap:.65rem; flex-wrap:wrap;"><span class="tag">Embedded Systems</span></div>
+              <div class="tag-row"><span class="tag">Embedded Systems</span></div>
             </div>
             <div class="project-block"><strong>Overview</strong><p>Developed a distributed system using two Raspberry Pi devices for communication and control over LoRa.</p></div>
             <div class="project-block"><strong>Technologies</strong><p>Raspberry Pi, Python, Ubuntu, LoRa, edge computing.</p></div>
@@ -809,7 +797,7 @@
           <article class="card project-card reveal">
             <div class="project-top">
               <h3>E-Commerce Fraud Detection</h3>
-              <div class="tag-row" style="gap:.65rem; flex-wrap:wrap;"><span class="tag">Business Data</span></div>
+              <div class="tag-row"><span class="tag">Business Data</span></div>
             </div>
             <div class="project-block"><strong>Overview</strong><p>Analyzed transaction data to identify suspicious patterns and support fraud-related investigation.</p></div>
             <div class="project-block"><strong>Technologies</strong><p>Python, machine learning workflows, data analysis, reporting-style summaries.</p></div>
@@ -819,7 +807,7 @@
           <article class="card project-card reveal">
             <div class="project-top">
               <h3>UiPath & C# Automation</h3>
-              <div class="tag-row" style="gap:.65rem; flex-wrap:wrap;"><span class="tag">Automation</span></div>
+              <div class="tag-row"><span class="tag">Automation</span></div>
             </div>
             <div class="project-block"><strong>Overview</strong><p>Built automation workflows for repetitive computer tasks, including scraping and routine data handling.</p></div>
             <div class="project-block"><strong>Technologies</strong><p>UiPath, C#, automation workflows, web scraping.</p></div>
@@ -829,7 +817,7 @@
           <article class="card project-card reveal">
             <div class="project-top">
               <h3>ML & Sensordata Analysis for Corrosion Detection</h3>
-              <div class="tag-row" style="gap:.65rem; flex-wrap:wrap;"><span class="tag">Research</span></div>
+              <div class="tag-row"><span class="tag">Research</span></div>
             </div>
             <div class="project-block"><strong>Overview</strong><p>Worked on a research-oriented project using sensor data for anomaly and corrosion detection.</p></div>
             <div class="project-block"><strong>Technologies</strong><p>Python, machine learning libraries, sensor data analysis, visualization.</p></div>
@@ -908,8 +896,8 @@
           <h2>Available for student roles, internships, and working student positions.</h2>
           <p></p>
         </div>
-        <div class="card reveal" style="align-self:center;">
-          <div class="contact-links" style="gap:.8rem; flex-wrap:wrap; max-width:100%;">
+        <div class="card reveal">
+          <div class="contact-links">
             <a class="cta" href="./Ali_Al-Kelabi_CV.pdf" download aria-label="Download Ali Al-Kelabi CV">Ali_Al-Kelabi_CV</a>
             <a class="ghost-btn" href="mailto:your-email@example.com">Email</a>
             <a class="ghost-btn" href="https://www.linkedin.com/in/ali-al-kelabi-19096b207/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
