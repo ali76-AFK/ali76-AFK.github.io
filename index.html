@@ -7,8 +7,11 @@
   <meta name="description" content="Engineer Ali Al-Kelabi — AI, robotics, automation, and data analytics portfolio for job applications." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
+    .eyebrow-tight{display:inline-flex;width:fit-content;max-width:100%;padding:.35rem .7rem;}
+    .eyebrow-tight{line-height:1;white-space:nowrap;}
+
     /* Art direction: professional AI/robotics portfolio → calm, technical, credible, minimal
        Palette: warm-neutral surfaces with restrained teal accent for focus and CTAs
        Typography: Instrument Serif + Inter for a refined, professional but modern tone
@@ -239,10 +242,10 @@
     }
     .hero h1 {
       margin: 0;
-      font-family: var(--font-display);
+      font-family: var(--font-body);
       font-size: var(--text-3xl);
-      line-height: 0.98;
-      letter-spacing: -0.03em;
+      line-height: 1.02;
+      letter-spacing: -0.04em;
       max-width: 11ch;
     }
     .hero-intro {
@@ -327,7 +330,7 @@
     .section-head h2 {
       margin: 0;
       font-size: var(--text-2xl);
-      font-family: var(--font-display);
+      font-family: var(--font-body);
       line-height: 1.05;
       letter-spacing: -0.025em;
     }
@@ -541,9 +544,7 @@
   </style>
 </head>
 <body>
-  <a class="skip-link" href="#content">Skip to content</a>
-
-  <header class="site-header">
+    <header class="site-header">
     <div class="container">
       <div class="header-inner">
         <a class="brand" href="#top" aria-label="Engineer Ali Al-Kelabi home">
@@ -589,7 +590,7 @@
     <section class="hero" id="top">
       <div class="container hero-grid">
         <div class="hero-copy reveal">
-          <span class="eyebrow">AI · Robotics · Automation · Data</span>
+          <span class="eyebrow eyebrow-tight">AI · Robotics · Automation · Data</span>
           <h1>Building practical AI systems for real-world engineering problems.</h1>
           <p class="hero-intro">
             Master’s student in Artificial Intelligence for Smart Sensors and Actuators with hands-on experience in machine learning, computer vision, robotics simulation, data analytics, automation, and software development. Comfortable across the full development cycle, from data preparation and prototyping to implementation, testing, and documentation.
@@ -629,7 +630,7 @@
     <section id="about">
       <div class="container about-grid">
         <div class="section-head reveal">
-          <span class="eyebrow">Profile</span>
+          <span class="eyebrow eyebrow-tight">Profile</span>
           <h2>Structured, practical, and responsible in how I build.</h2>
         </div>
         <div class="about-text reveal">
@@ -639,7 +640,7 @@
           <p>
             High initiative, fast onboarding, pragmatic problem solving, and responsible use of AI tools are central to how I work. I use AI tools responsibly to accelerate development, explore solutions faster, and improve the quality of results, while retaining full responsibility for implementation and validation.
           </p>
-          <div class="about-highlight" aria-label="Key working traits">
+          <div class="card" style="margin: 0 0 1.5rem; background: var(--color-primary-highlight); border-color: color-mix(in srgb, var(--color-primary) 20%, transparent);"><h3 style="margin:0 0 0.75rem;">Availability</h3><p style="margin:0; color: var(--color-text);">I am available on short notice, ready to start immediately, and willing to relocate if necessary.</p></div><div class="about-highlight" aria-label="Key working traits">
             <span class="chip">High initiative</span>
             <span class="chip">Fast onboarding</span>
             <span class="chip">Pragmatic problem solving</span>
@@ -654,7 +655,7 @@
     <section id="skills">
       <div class="container">
         <div class="section-head reveal">
-          <span class="eyebrow">Technical skills</span>
+          <span class="eyebrow eyebrow-tight">Technical skills</span>
           <h2>Applied across AI, robotics, data, and software workflows.</h2>
           <p>My stack is strongest where machine learning, engineering systems, and implementation quality meet.</p>
         </div>
@@ -737,7 +738,7 @@
     <section id="projects">
       <div class="container">
         <div class="section-head reveal">
-          <span class="eyebrow">Selected projects</span>
+          <span class="eyebrow eyebrow-tight">Selected projects</span>
           <h2>Projects that connect models, systems, and usable outcomes.</h2>
           <p>Each project below highlights the problem context, the technologies used, and the practical value delivered.</p>
         </div>
@@ -829,7 +830,7 @@
     <section id="experience">
       <div class="container">
         <div class="section-head reveal">
-          <span class="eyebrow">Experience</span>
+          <span class="eyebrow eyebrow-tight">Experience</span>
           <h2>Experience shaped by applied automation and ML analysis.</h2>
         </div>
         <div class="timeline">
@@ -867,7 +868,7 @@
     <section id="education">
       <div class="container">
         <div class="section-head reveal">
-          <span class="eyebrow">Education</span>
+          <span class="eyebrow eyebrow-tight">Education</span>
           <h2>Built on mechatronics, now focused on applied artificial intelligence.</h2>
         </div>
         <div class="edu-grid">
@@ -891,9 +892,9 @@
     <section id="contact">
       <div class="container contact-card">
         <div class="section-head reveal">
-          <span class="eyebrow">Contact</span>
+          <span class="eyebrow eyebrow-tight">Contact</span>
           <h2>Available for student roles, internships, and working student positions.</h2>
-          <p>This section is ready for your final links, downloadable CV file, LinkedIn, GitHub, and preferred contact details.</p>
+          <p></p>
         </div>
         <div class="card reveal">
           <div class="contact-links">
@@ -903,7 +904,7 @@
             <a class="ghost-btn" href="https://github.com/ali76-AFK" target="_blank" rel="noopener noreferrer">GitHub</a>
           </div>
           <p class="muted" style="margin-top: 1rem;">
-            The contact section now includes your real email, LinkedIn, and GitHub. Add your PDF CV file in the same folder if you want the download button to work locally.
+            
           </p>
         </div>
       </div>
@@ -916,7 +917,7 @@
         <strong>Engineer Ali Al-Kelabi</strong><br>
         <span>AI, robotics, automation, and data analytics portfolio.</span>
       </div>
-      <div class="faint">Single-page portfolio draft designed for professional and minimal presentation.</div>
+      <div class="faint"></div>
     </div>
   </footer>
 
