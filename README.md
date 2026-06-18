@@ -48,6 +48,3 @@ This portfolio highlights:
 - Basic JavaScript for theme switching and navigation.
 - Professional presentation of technical projects.
 
-## Notes
-
-This portfolio is intended as a living project and can be updated over time with new work, projects, and experience.
