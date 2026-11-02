@@ -129,7 +129,7 @@ const exp=[
 ["Student Assistant – ML & Sensordata Analysis","IIUM / Malaysian Nuclear Agency, Malaysia","11/2019 – 02/2023",["Designed and customized 3D PEC probes for non-destructive material testing.","Ran pulsed eddy current tests on ferromagnetic plates with an electrical measurement chain and LabVIEW.","Analyzed signals for detecting corrosion under insulation."]]];
 ["High initiative","Fast onboarding","Work well under pressure","Pragmatic problem solving","Clean documentation","Responsible AI tool use","Interdisciplinary collaboration"].forEach(x=>traits.innerHTML+=`<span class="chip">${x}</span>`);
 skillgrid.innerHTML=skills.map(s=>`<div class="card fade"><h3>${s[0]}</h3><p>${s[1]}</p><div class="chips">${s[2].map(c=>`<span class="chip">${c}</span>`).join("")}</div></div>`).join("");
-projlist.innerHTML=projects.map((p,n)=>`<article class="proj"><div class="ph fade"><span>Project photo ${n+1}<br>images/project-${n+1}.jpg</span><img src="${p.img||`images/project-${n+1}.jpg`}" alt="${p.t}" loading="lazy" onerror="this.remove()"></div><div class="fade"><span class="tag">${p.c}</span><h3>${p.t}</h3><p><b>Overview:</b> ${p.o}</p><p><b>Technologies:</b> ${p.k}</p><p><b>Impact:</b> ${p.i}</p></div></article>`).join("");
+projlist.innerHTML=projects.map((p,n)=>`<article class="proj"><div class="ph fade"><span>Project photo ${n+1}<br>images/project-${n+1}.png</span><img src="${p.img||`images/project-${n+1}.png`}" alt="${p.t}" loading="lazy" onerror="this.remove()"></div><div class="fade"><span class="tag">${p.c}</span><h3>${p.t}</h3><p><b>Overview:</b> ${p.o}</p><p><b>Technologies:</b> ${p.k}</p><p><b>Impact:</b> ${p.i}</p></div></article>`).join("");
 
 </script>
 <script>
