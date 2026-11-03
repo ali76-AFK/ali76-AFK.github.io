@@ -9,7 +9,7 @@ This project is a professional portfolio website designed to present my technica
 ## Features
 
 - Responsive layout for desktop and mobile devices.
-- Light and dark theme support.
+- Dark and violet theme.
 - Hero section with professional positioning.
 - Profile section with work style, availability, and key strengths.
 - Technical skills grouped by category.
@@ -29,6 +29,7 @@ This project is a professional portfolio website designed to present my technica
 - Responsive design principles
 - CSS variables
 - Intersection Observer API
+- Googlepis
 
 
 ## Highlights
