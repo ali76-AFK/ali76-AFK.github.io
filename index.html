@@ -61,7 +61,7 @@ footer{padding:2rem 0;border-top:1px solid var(--bd);text-align:center;color:var
 <h1>Hi, I'm <span class="grad">Ali Al-Kelabi</span></h1>
 <p class="mu" style="max-width:62ch;margin:0 auto">M.Eng. student in Artificial Intelligence for Smart Sensors and Actuators, building practical AI, data analytics, robotics and electrical systems for real-world engineering problems — from data preparation and prototyping to testing and documentation.</p>
 <div class="btns"><a class="btn p" href="#projects">View projects</a><a class="btn" href="./Ali_Al-Kelabi_CV.pdf" download>Download CV</a></div>
-<p class="mu" style="font-size:.9rem;margin-top:1.2rem">German B2 · English C2</p></div>
+<p class="mu" style="font-size:.9rem;margin-top:1.2rem"></p></div>
 </div></section>
 
 <section id="about"><div class="wrap">
@@ -128,10 +128,10 @@ const skills=[
 ["Tools & platforms","Dockerized environments, Jupyter, Raspberry Pi, Ubuntu, lightweight backends.",["Docker","Ubuntu","Jupyter","Flask","FastAPI","Streamlit"]],
 ["Working style","Rapid prototyping, documentation, disciplined implementation, responsible AI tool use.",["Prototyping","Documentation","Validation mindset","Teamwork"]]];
 const exp=[
-["Werkstudent – UiPath & C# Automation","Deggendorf Institute of Technology, Cham, Germany","06/2025 – 11/2025",["Developed a UiPath automation course with practical use cases.","Implemented web scraping for automated data pipelines.","Supported process optimization through automation."]],
+["Werkstudent – UiPath & C# Automation","Deggendorf Institute of Technology, Germany","06/2025 – 11/2025",["Developed a UiPath automation course with practical use cases.","Implemented web scraping for automated data pipelines.","Supported process optimization through automation."]],
 ["Project Collaboration – ML & Computer Vision","ICON, Remote, Malaysia","03/2024 – 07/2024",["DL (YOLO) and ML project detecting violations in public spaces, storing plate and route data in databases for tracking.","Second use case (OCR) for locomotive detection and extraction of visible and size-related information.","Supported Python training, data preparation and labeling with CVAT and LabelImg."]],
 ["Student Assistant – ML & Sensordata Analysis","IIUM / Malaysian Nuclear Agency, Malaysia","11/2019 – 02/2023",["Designed and customized 3D PEC probes for non-destructive material testing.","Ran pulsed eddy current tests on ferromagnetic plates with an electrical measurement chain and LabVIEW.","Analyzed signals for detecting corrosion under insulation."]]];
-["High initiative","Fast onboarding","Work well under pressure","Pragmatic problem solving","Clean documentation /n","Responsible AI tool use","Interdisciplinary collaboration"].forEach(x=>traits.innerHTML+=`<span class="chip">${x}</span>`);
+["High initiative","Fast onboarding","Work well under pressure","Pragmatic problem solving","Clean documentation","Responsible AI tool use","Interdisciplinary collaboration"].forEach(x=>traits.innerHTML+=`<span class="chip">${x}</span>`);
 skillgrid.innerHTML=skills.map(s=>`<div class="card fade"><h3>${s[0]}</h3><p>${s[1]}</p><div class="chips">${s[2].map(c=>`<span class="chip">${c}</span>`).join("")}</div></div>`).join("");
 projlist.innerHTML=projects.map((p,n)=>`<article class="proj"><div class="ph fade"><span>Project photo ${n+1}<br>images/project-${n+1}.png</span><img src="${p.img||`images/project-${n+1}.png`}" alt="${p.t}" loading="lazy" onerror="this.remove()"></div><div class="fade"><span class="tag">${p.c}</span><h3>${p.t}</h3><p><b>Overview:</b> ${p.o}</p><p><b>Technologies:</b> ${p.k}</p><p><b>Impact:</b> ${p.i}</p></div></article>`).join("");
 
