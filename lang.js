@@ -1,0 +1,107 @@
+/* EN/DE switcher. Site opens in English; the button toggles the whole page + the CV file. */
+(function(){
+const CV={en:"Ali_Al-Kelabi_CV.pdf",de:"Ali_Al-Kelabi_CV_DE.pdf"}; // <- your two CV file names
+const BTN={en:"Deutsch",de:"English"};
+const DE={
+"About":"Über mich","Skills":"Fähigkeiten","Projects":"Projekte","Experience":"Erfahrung","Education":"Ausbildung","Contact":"Kontakt","Reach out":"Kontakt aufnehmen",
+"Hi, I'm":"Hallo, ich bin","View projects":"Projekte ansehen","Download CV":"Lebenslauf herunterladen",
+"Profile":"Profil","Structured, practical and":"Strukturiert, praktisch und","responsible":"verantwortungsbewusst",
+"M.Eng. student in Artificial Intelligence for Smart Sensors and Actuators, building practical AI, data analytics, robotics and electrical systems for real-world engineering problems — from data preparation and prototyping to testing and documentation.":"M.Eng.-Student im Studiengang Artificial Intelligence for Smart Sensors and Actuators. Ich entwickle praxisnahe KI-, Datenanalyse-, Robotik- und Elektroniksysteme für reale Ingenieurprobleme – von der Datenaufbereitung und dem Prototyping bis zu Test und Dokumentation.",
+"I work best on end-to-end systems that connect AI, software and real-world applications. I use AI tools responsibly to move faster and improve quality, while keeping full responsibility for implementation and validation.":"Am besten arbeite ich an durchgängigen Systemen, die KI, Software und reale Anwendungen verbinden. Ich setze KI-Werkzeuge verantwortungsvoll ein, um schneller zu arbeiten und die Qualität zu steigern, und behalte dabei die volle Verantwortung für Umsetzung und Validierung.",
+"High initiative":"Hohe Eigeninitiative","Fast onboarding":"Schnelle Einarbeitung","Work well under pressure":"Belastbar unter Druck","Pragmatic problem solving":"Pragmatische Problemlösung","Clean documentation":"Saubere Dokumentation","Responsible AI tool use":"Verantwortungsvoller KI-Einsatz","Interdisciplinary collaboration":"Interdisziplinäre Zusammenarbeit",
+"Availability":"Verfügbarkeit","Available on short notice, ready to start immediately, and willing to relocate.":"Kurzfristig verfügbar, sofort einsatzbereit und umzugsbereit.",
+"Technical skills":"Technische Fähigkeiten","Applied across":"Angewandt in","AI, robotics, data":"KI, Robotik, Daten","and software":"und Software",
+"My stack is strongest where machine learning, engineering systems and implementation quality meet.":"Meine Stärken liegen dort, wo maschinelles Lernen, Ingenieursysteme und Umsetzungsqualität zusammentreffen.",
+"Programming & development":"Programmierung & Entwicklung","Python, C#, Bash, basic JavaScript, API workflows, Linux, Git.":"Python, C#, Bash, JavaScript-Grundlagen, API-Workflows, Linux, Git.",
+"AI, deep & machine learning":"KI, Deep Learning & Machine Learning","Model development and evaluation, image classification, sequence models, anomaly detection, computer vision.":"Modellentwicklung und -evaluation, Bildklassifikation, Sequenzmodelle, Anomalieerkennung, Computer Vision.",
+"PyTorch familiarity":"PyTorch-Kenntnisse","AI agents":"KI-Agenten",
+"Data & analytics":"Daten & Analytik","Structured analysis, PySpark pipelines, workflow automation, reproducible processing, reporting.":"Strukturierte Analyse, PySpark-Pipelines, Workflow-Automatisierung, reproduzierbare Verarbeitung, Reporting.",
+"Robotics & engineering":"Robotik & Ingenieurwesen","Simulation, robot control, perception-to-action pipelines, motion planning, ROS workflows.":"Simulation, Robotersteuerung, Wahrnehmungs-zu-Aktions-Pipelines, Bewegungsplanung, ROS-Workflows.","ROS2 familiarity":"ROS2-Kenntnisse",
+"Tools & platforms":"Werkzeuge & Plattformen","Dockerized environments, Jupyter, Raspberry Pi, Ubuntu, lightweight backends.":"Docker-Umgebungen, Jupyter, Raspberry Pi, Ubuntu, schlanke Backends.",
+"Working style":"Arbeitsweise","Rapid prototyping, documentation, disciplined implementation, responsible AI tool use.":"Rapid Prototyping, Dokumentation, disziplinierte Umsetzung, verantwortungsvoller Einsatz von KI-Werkzeugen.","Documentation":"Dokumentation","Validation mindset":"Validierungsdenken","Teamwork":"Teamarbeit",
+"Selected projects":"Ausgewählte Projekte","Projects that connect":"Projekte, die","models, systems":"Modelle, Systeme","and outcomes":"und Ergebnisse verbinden",
+"Each project shows the context, technologies and practical value delivered.":"Jedes Projekt zeigt Kontext, eingesetzte Technologien und den praktischen Nutzen.",
+"Overview:":"Überblick:","Technologies:":"Technologien:","Impact:":"Wirkung:",
+/* projects */
+"Gesture based Manipulator control":"Gestenbasierte Manipulatorsteuerung","Industrial Robotics":"Industrierobotik",
+"Allowing hand gestures and movement to control an arm to do certian tasks with no screen touch or clicks, simulation based.":"Handgesten und Bewegungen steuern einen Roboterarm bei bestimmten Aufgaben – ohne Bildschirmberührung oder Klicks, simulationsbasiert.",
+"A risk minimizing project for tasks that require human control but machine precision.":"Ein risikominimierendes Projekt für Aufgaben, die menschliche Steuerung, aber maschinelle Präzision erfordern.",
+"AI Workflow Automation":"KI-Workflow-Automatisierung",
+"AI-assisted AML investigator copilot that ingests transaction-monitoring alerts as JSON and generates a structured triage summary: typology, risk bucket, indicators, false-positive signals, next action, explanation and confidence.":"KI-gestützter Copilot für AML-Ermittler: nimmt Alarme der Transaktionsüberwachung als JSON entgegen und erstellt eine strukturierte Triage-Zusammenfassung mit Typologie, Risikostufe, Indikatoren, Fehlalarm-Signalen, nächstem Schritt, Begründung und Konfidenz.",
+"Combines an LLM backend with a Python rule overlay for safer, explainable decisions. Explicitly human-in-the-loop: the model supports triage, the investigator decides.":"Kombiniert ein LLM-Backend mit einer Python-Regelschicht für sicherere, nachvollziehbare Entscheidungen. Bewusst Human-in-the-Loop: Das Modell unterstützt die Triage, der Ermittler entscheidet.",
+"Industrial Telemetry Anomaly Detection":"Anomalieerkennung in industrieller Telemetrie","Industrial pipeline":"Industrielle Pipeline",
+"This project demonstrates a production-style predictive maintenance and industrial monitoring workflow.":"Dieses Projekt zeigt einen produktionsnahen Workflow für vorausschauende Wartung und industrielle Überwachung.",
+"The system is designed to reflect realistic needs in automotive, Industry 4.0, and manufacturing environments.":"Das System bildet realistische Anforderungen in Automobil-, Industrie-4.0- und Fertigungsumgebungen ab.",
+"CampaignPulse – Analytics Dashboard":"CampaignPulse – Analyse-Dashboard","Ecommerce Analytics":"E-Commerce-Analytik",
+"Product-oriented analytics dashboard for purchase, funnel and KPI data, with separated front end, API routing, service layer and cloud data retrieval plus a mock fallback for local development.":"Produktorientiertes Analyse-Dashboard für Kauf-, Funnel- und KPI-Daten mit getrenntem Frontend, API-Routing, Service-Schicht und Cloud-Datenabruf sowie Mock-Fallback für die lokale Entwicklung.",
+"A professional interface for non-technical stakeholders, demonstrating data analytics, API design and product thinking under minimal-budget constraints.":"Eine professionelle Oberfläche für nicht-technische Stakeholder, die Datenanalyse, API-Design und Produktdenken bei minimalem Budget demonstriert.",
+"Diabetic Retinopathy Detection":"Erkennung diabetischer Retinopathie","Healthcare AI":"KI im Gesundheitswesen",
+"ML/DL system to detect diabetic retinopathy and estimate severity from medical image datasets.":"ML/DL-System zur Erkennung diabetischer Retinopathie und Schweregradschätzung anhand medizinischer Bilddaten.",
+"A practical healthcare AI prototype for image-based classification.":"Ein praxisnaher KI-Prototyp für das Gesundheitswesen zur bildbasierten Klassifikation.",
+"Industrial Telemetry Ingestion Desktop App":"Desktop-App zur Aufnahme industrieller Telemetriedaten","Data Processing":"Datenverarbeitung",
+"Desktop application for processing industrial telemetry data using C++ and Qt Widgets, connected to Microsoft SQL Server via ODBC.":"Desktop-Anwendung zur Verarbeitung industrieller Telemetriedaten mit C++ und Qt Widgets, angebunden per ODBC an Microsoft SQL Server.",
+"Practical ingestion solution with validation, database connectivity, logging and structured documentation of requirements, data flows and error cases.":"Praxistaugliche Ingestion-Lösung mit Validierung, Datenbankanbindung, Logging und strukturierter Dokumentation von Anforderungen, Datenflüssen und Fehlerfällen.",
+"Forest Fire Detection and Monitoring":"Waldbranderkennung und -überwachung","Safety":"Sicherheit",
+"It is a deep learning based forest fire monitoring system that analysis satelite images to detect wild fire and reporting.":"Ein Deep-Learning-basiertes System zur Waldbrandüberwachung, das Satellitenbilder analysiert, um Waldbrände zu erkennen und zu melden.",
+"A practical easy access prototype system for image-based classification.":"Ein praxisnaher, leicht zugänglicher Prototyp zur bildbasierten Klassifikation.",
+"Rag Local Research Assistant":"Lokaler RAG-Recherche-Assistent","LLM and Data analysis":"LLM & Datenanalyse",
+"Privacy-first local RAG desktop assistant for PDF and text document analysis.":"Datenschutzorientierter lokaler RAG-Desktop-Assistent zur Analyse von PDF- und Textdokumenten.",
+"The project demonstrates practical LLM integration, local inference, desktop UI engineering, and privacy-oriented application design.":"Das Projekt zeigt praktische LLM-Integration, lokale Inferenz, Desktop-UI-Entwicklung und datenschutzorientiertes Anwendungsdesign.",
+"Gesture Password Access Control":"Zugangskontrolle per Gestenpasswort",
+"Gesture-based access control prototype using MediaPipe hand tracking.":"Prototyp einer gestenbasierten Zugangskontrolle mit MediaPipe-Handtracking.",
+"This project implements a gesture-based password system that combines computer vision, sequence modeling, and a local desktop interface.":"Das Projekt setzt ein gestenbasiertes Passwortsystem um, das Computer Vision, Sequenzmodellierung und eine lokale Desktop-Oberfläche kombiniert.",
+"IoT Anomaly Detection – PySpark Pipeline":"IoT-Anomalieerkennung – PySpark-Pipeline","Scalable Data":"Skalierbare Daten",
+"Scalable pipeline for processing large sensor datasets and detecting anomalies with statistical methods.":"Skalierbare Pipeline zur Verarbeitung großer Sensordatensätze und zur Anomalieerkennung mit statistischen Methoden.",
+"Scalable, containerized and reproducible analysis of sensor data.":"Skalierbare, containerisierte und reproduzierbare Analyse von Sensordaten.",
+"ROS-Based UR5 Robotic Arm":"ROS-basierter UR5-Roboterarm","Robotics":"Robotik",
+"ROS-based UR5 arm in simulation with HSV-based object detection and pick-and-place-style motion planning.":"ROS-basierter UR5-Arm in der Simulation mit HSV-basierter Objekterkennung und Pick-and-Place-Bewegungsplanung.",
+"A perception-to-action robotics pipeline combining computer vision and motion planning.":"Eine Wahrnehmungs-zu-Aktions-Pipeline in der Robotik, die Computer Vision und Bewegungsplanung kombiniert.",
+"System Communication & Control with Edge Devices":"Systemkommunikation & -steuerung mit Edge-Geräten","Embedded Systems":"Eingebettete Systeme",
+"Distributed system of two Raspberry Pi devices for communication and control over LoRa.":"Verteiltes System aus zwei Raspberry-Pi-Geräten für Kommunikation und Steuerung über LoRa.",
+"Practical experience in distributed embedded systems and remote communication.":"Praktische Erfahrung mit verteilten eingebetteten Systemen und Fernkommunikation.",
+"Robotics Task Orchestrator":"Robotik-Aufgabenorchestrierung",
+"Automating and controlling an arm manipulator through normal human text via an LLM but analysing the robot movements via a VLA.":"Automatisierung und Steuerung eines Manipulatorarms über natürliche Texteingaben per LLM, wobei die Roboterbewegungen über ein VLA analysiert werden.",
+"Supports easier human interaction and possibility fit according to provided parameters and requests.":"Ermöglicht eine einfachere Mensch-Roboter-Interaktion und passt sich den vorgegebenen Parametern und Anfragen an.",
+"Newsletter Orchestrator":"Newsletter-Orchestrierung","Automation":"Automatisierung",
+"LLM based Automation workflow for news collection, summarization and delivery tasks, including scraping, subscribers, human-in-the-loop and routine data handling.":"LLM-basierter Automatisierungs-Workflow für Nachrichtensammlung, Zusammenfassung und Versand, inklusive Scraping, Abonnentenverwaltung, Human-in-the-Loop und routinemäßiger Datenverarbeitung.",
+"Reduced manual effort through process automation.":"Weniger manueller Aufwand durch Prozessautomatisierung.",
+"ML & Sensordata Analysis for Corrosion Detection":"ML & Sensordatenanalyse zur Korrosionserkennung","Research":"Forschung",
+"Research-oriented project using sensor data for anomaly and corrosion detection.":"Forschungsorientiertes Projekt mit Sensordaten zur Anomalie- und Korrosionserkennung.",
+"Supported condition-monitoring and fault-detection research.":"Unterstützte Forschung zu Zustandsüberwachung und Fehlererkennung.",
+/* experience */
+"Shaped by applied":"Geprägt von angewandter","automation and ML":"Automatisierung und ML",
+"Werkstudent – UiPath & C# Automation":"Werkstudent – UiPath & C#-Automatisierung","Deggendorf Institute of Technology, Germany":"Technische Hochschule Deggendorf, Deutschland",
+"Developed a UiPath automation course with practical use cases.":"Entwicklung eines UiPath-Automatisierungskurses mit praxisnahen Anwendungsfällen.",
+"Implemented web scraping for automated data pipelines.":"Umsetzung von Web Scraping für automatisierte Datenpipelines.",
+"Supported process optimization through automation.":"Unterstützung der Prozessoptimierung durch Automatisierung.",
+"Project Collaboration – ML & Computer Vision":"Projektmitarbeit – ML & Computer Vision","ICON, Remote, Malaysia":"ICON, remote, Malaysia",
+"DL (YOLO) and ML project detecting violations in public spaces, storing plate and route data in databases for tracking.":"DL- (YOLO) und ML-Projekt zur Erkennung von Verstößen im öffentlichen Raum; Kennzeichen- und Routendaten werden zur Nachverfolgung in Datenbanken gespeichert.",
+"Second use case (OCR) for locomotive detection and extraction of visible and size-related information.":"Zweiter Anwendungsfall (OCR) zur Lokomotiverkennung und Extraktion sichtbarer sowie größenbezogener Informationen.",
+"Supported Python training, data preparation and labeling with CVAT and LabelImg.":"Unterstützung bei Python-Training, Datenaufbereitung und Labeling mit CVAT und LabelImg.",
+"Student Assistant – ML & Sensordata Analysis":"Studentische Hilfskraft – ML & Sensordatenanalyse",
+"Designed and customized 3D PEC probes for non-destructive material testing.":"Konstruktion und Anpassung von 3D-PEC-Sonden für die zerstörungsfreie Werkstoffprüfung.",
+"Ran pulsed eddy current tests on ferromagnetic plates with an electrical measurement chain and LabVIEW.":"Durchführung von Pulsed-Eddy-Current-Messungen an ferromagnetischen Platten mit elektrischer Messkette und LabVIEW.",
+"Analyzed signals for detecting corrosion under insulation.":"Signalanalyse zur Erkennung von Korrosion unter Isolierung.",
+/* education + contact + footer */
+"From mechatronics to":"Von der Mechatronik zur","applied AI":"angewandten KI","03/2025 – Present":"03/2025 – heute",
+"Technische Hochschule Deggendorf (THD) · Machine Learning, Deep Learning, Computer Vision, Data Engineering, Edge Systems, Intelligent Automation.":"Technische Hochschule Deggendorf (THD) · Machine Learning, Deep Learning, Computer Vision, Data Engineering, Edge-Systeme, Intelligente Automatisierung.",
+"B.Eng. Mechatronics, with distinction":"B.Eng. Mechatronik, mit Auszeichnung",
+"IIUM University Malaysia · Robotics, Automation, Software Engineering, Mathematics.":"IIUM University Malaysia · Robotik, Automatisierung, Software Engineering, Mathematik.",
+"Open to":"Offen für","student roles, internships":"Studentenstellen, Praktika","and working student positions":"und Werkstudentenstellen","Email":"E-Mail",
+"· AI, robotics, automation and data analytics portfolio":"· Portfolio für KI, Robotik, Automatisierung und Datenanalyse"
+};
+const nodes=[],w=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT);
+while(w.nextNode()){const n=w.currentNode;if(n.nodeValue.trim()&&!/^(SCRIPT|STYLE)$/.test(n.parentNode.nodeName))nodes.push([n,n.nodeValue])}
+const reach=document.querySelector("header a.btn.p"),btn=document.createElement("button");
+btn.type="button";btn.className="btn";btn.style.cssText="padding:.5rem 1.1rem;cursor:pointer;color:inherit;font-family:inherit";
+const box=document.createElement("div");box.style.cssText="display:flex;gap:.6rem;align-items:center";
+reach.replaceWith(box);box.append(btn,reach);
+let lang="en";
+function set(l){lang=l;
+ nodes.forEach(([n,o])=>{const t=o.trim(),d=DE[t];n.nodeValue=(l==="de"&&d)?o.replace(t,()=>d):o});
+ document.documentElement.lang=l;btn.textContent=BTN[l];
+ btn.setAttribute("aria-label",l==="en"?"Switch to German":"Switch to English");
+ document.querySelectorAll('a[href*="Al-Kelabi_CV"]').forEach(a=>a.setAttribute("href","./"+CV[l]));}
+btn.addEventListener("click",()=>set(lang==="en"?"de":"en"));
+set("en");
+})();
