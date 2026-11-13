@@ -174,13 +174,13 @@ document.querySelectorAll(".cv").forEach(a => {
 
     a.href = isGerman
         ? "./Ali_Al_Kelabi_CV_DE.pdf"
-        : "./Ali_Al_Kelabi_CV.pdf";
+        : "./Ali_Al_Kelabi_CV_EN.pdf";
 
     a.setAttribute(
         "download",
         isGerman
             ? "Ali_Al_Kelabi_CV_DE.pdf"
-            : "Ali_Al_Kelabi_CV.pdf"
+            : "Ali_Al_Kelabi_CV_EN.pdf"
     );
 }); const lb=$("lang");lb.textContent=lang==="de"?"English":"Deutsch";lb.setAttribute("aria-label",lang==="de"?"Switch language to English":"Sprache auf Deutsch wechseln (Switch language to German)");lb.lang=lang==="de"?"en":"de";
  $("burger").setAttribute("aria-label",lang==="de"?"Menü öffnen":"Open menu");
