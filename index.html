@@ -1,146 +1,153 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Engineer Ali Al-Kelabi | AI · Robotics · Automation · Data</title>
-<meta name="description" content="Ali Al-Kelabi — AI, robotics, automation and data analytics portfolio.">
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Ali Al-Kelabi | AI & Robotics · Computer Vision · Sensor Systems · Automation</title>
+<meta name="description" content="Ali Al-Kelabi – M.Eng. student in AI for Smart Sensors and Actuators. Open to internships, working-student roles and Master's theses.">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 :root{--bg:#0a0d22;--s:#11152e;--s2:#171c3b;--bd:#2a2f58;--tx:#e8eaf8;--mu:#9aa0c8;--v:#8b5cf6;--r:#f43f5e;--g:linear-gradient(135deg,#8b5cf6,#f43f5e)}
 *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:5rem}
-body{margin:0;background:radial-gradient(900px 500px at 15% -5%,#2a1b5e55,transparent),radial-gradient(800px 500px at 100% 20%,#5e1b3a44,transparent),var(--bg);color:var(--tx);font:400 1.05rem/1.65 Inter,system-ui,sans-serif}
+body{margin:0;background:var(--bg);color:var(--tx);font:400 1.02rem/1.65 Inter,system-ui,sans-serif;overflow-x:hidden}
 a{color:inherit;text-decoration:none}img{display:block;max-width:100%}
+#bg{position:fixed;inset:0;z-index:0;pointer-events:none}
+#spot{position:fixed;inset:0;z-index:0;pointer-events:none;background:radial-gradient(500px circle at var(--x,50%) var(--y,30%),#8b5cf622,transparent 60%)}
+header,main,footer{position:relative;z-index:1}
 .wrap{width:min(100% - 2rem,1040px);margin-inline:auto}
 header{position:sticky;top:0;z-index:20;backdrop-filter:blur(14px);background:#0a0d22cc;border-bottom:1px solid var(--bd)}
 .nav{display:flex;align-items:center;justify-content:space-between;min-height:4rem;gap:1rem}
-.nav b{font-weight:700}.nav b i{font-style:normal;background:var(--g);-webkit-background-clip:text;background-clip:text;color:transparent}
-.links{display:flex;gap:1.3rem;font-size:.9rem;color:var(--mu);flex-wrap:wrap;justify-content:center}.links a:hover{color:#fff}
-section{padding:5rem 0;text-align:center}
-.tag{display:inline-block;padding:.3rem .8rem;border-radius:99px;background:#8b5cf622;border:1px solid #8b5cf655;color:#c4b5fd;font-size:.75rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
-h1,h2{margin:.8rem 0;line-height:1.1;letter-spacing:-.03em}
-h1{font-size:clamp(2rem,5vw,3.6rem)}h2{font-size:clamp(1.7rem,3.6vw,2.6rem)}
-.grad{background:var(--g);-webkit-background-clip:text;background-clip:text;color:transparent}
-.mu{color:var(--mu)}.sub{max-width:60ch;margin:0 auto 2.5rem}
-.hero{padding-top:4rem}.hero .wrap{display:grid;gap:2.5rem;justify-items:center}
-.portrait{position:relative;width:min(300px,70vw);aspect-ratio:1;border-radius:50%;padding:4px;background:var(--g);box-shadow:0 0 60px #8b5cf666,0 0 90px #f43f5e33}
+.nav b i{font-style:normal}.grad,.nav b i{background:var(--g);-webkit-background-clip:text;background-clip:text;color:transparent}
+.links{display:flex;gap:1.1rem;font-size:.86rem;color:var(--mu)}.links a:hover{color:#fff}
+section{padding:4.5rem 0;text-align:center;border-top:1px solid #2a2f5866}
+.num{display:block;font:500 .8rem 'JetBrains Mono',monospace;color:var(--r);margin-bottom:.4rem}
+.tag{display:inline-block;padding:.28rem .75rem;border-radius:99px;background:#8b5cf622;border:1px solid #8b5cf655;color:#c4b5fd;font-size:.72rem;font-weight:700;letter-spacing:.07em;text-transform:uppercase}
+.tag.r{background:#f43f5e1f;border-color:#f43f5e55;color:#fda4af}
+h1,h2{margin:.7rem 0;line-height:1.1;letter-spacing:-.03em}h1{font-size:clamp(2.2rem,5.5vw,4rem)}h2{font-size:clamp(1.6rem,3.4vw,2.4rem)}
+.mu{color:var(--mu)}.sub{max-width:62ch;margin:0 auto 2.2rem}
+.hero{border:0;padding-top:4rem}.hero .wrap{display:grid;gap:1.8rem;justify-items:center}
+.portrait{width:min(260px,64vw);aspect-ratio:1;border-radius:50%;padding:4px;background:var(--g);box-shadow:0 0 60px #8b5cf666,0 0 90px #f43f5e33}
 .portrait div{width:100%;height:100%;border-radius:50%;overflow:hidden;background:radial-gradient(circle at 30% 25%,#3b2a8a,#0e1129 70%)}
 .portrait img{width:100%;height:100%;object-fit:cover;object-position:50% 12%}
-.btns{display:flex;gap:.8rem;justify-content:center;flex-wrap:wrap;margin-top:1.5rem}
-.btn{padding:.8rem 1.4rem;border-radius:99px;font-weight:600;font-size:.95rem;border:1px solid var(--bd);background:var(--s);transition:.2s}
+.term{font:500 .9rem 'JetBrains Mono',monospace;background:#0b0f26cc;border:1px solid var(--bd);border-radius:.7rem;padding:.6rem 1rem;color:#c4b5fd;min-height:2.6rem}
+.term::after{content:"▍";color:var(--r);animation:bl 1s steps(1) infinite}@keyframes bl{50%{opacity:0}}
+.btns{display:flex;gap:.8rem;justify-content:center;flex-wrap:wrap}
+.btn{padding:.75rem 1.4rem;border-radius:99px;font-weight:600;font-size:.93rem;border:1px solid var(--bd);background:var(--s);transition:.2s;cursor:pointer}
 .btn.p{background:var(--g);border:0;box-shadow:0 6px 24px #8b5cf655}.btn:hover{transform:translateY(-2px)}
-.grid{display:grid;gap:1.2rem;grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}
-.card{background:linear-gradient(160deg,var(--s2),var(--s));border:1px solid var(--bd);border-radius:1.2rem;padding:1.4rem;text-align:left}
-.card h3{margin:0 0 .5rem;font-size:1.1rem}.card p{margin:0;color:var(--mu);font-size:.95rem}
-.chips{display:flex;flex-wrap:wrap;gap:.45rem;justify-content:center;margin-top:1rem}
-.card .chips{justify-content:flex-start}
-.chip{font-size:.78rem;padding:.3rem .7rem;border-radius:99px;background:#ffffff0d;border:1px solid var(--bd);color:#cfd3f5}
-.proj{display:grid;grid-template-columns:1fr 1fr;gap:2rem;align-items:center;text-align:left;margin-bottom:3.5rem}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:.9rem;width:100%;margin-top:.8rem}
+.stat{background:#171c3bcc;border:1px solid var(--bd);border-radius:1rem;padding:.9rem}.stat b{display:block;font-size:1.05rem}.stat span{font-size:.82rem;color:var(--mu)}
+.grid{display:grid;gap:1.1rem;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.card{background:linear-gradient(160deg,var(--s2),var(--s));border:1px solid var(--bd);border-radius:1.2rem;padding:1.3rem;text-align:left;transition:.25s}
+.card:hover{border-color:#8b5cf699;box-shadow:0 0 30px #8b5cf61f}
+.card h3{margin:.3rem 0 .4rem;font-size:1.08rem}.card p,.card li{color:var(--mu);font-size:.93rem}.card p{margin:.3rem 0}.card ul{margin:.5rem 0 0;padding-left:1.1rem}
+.chips{display:flex;flex-wrap:wrap;gap:.4rem;margin-top:.8rem}.center .chips{justify-content:center}
+.chip{font-size:.75rem;padding:.25rem .65rem;border-radius:99px;background:#ffffff0d;border:1px solid var(--bd);color:#cfd3f5}
+.proj{display:grid;grid-template-columns:1fr 1fr;gap:2rem;align-items:center;text-align:left;margin-bottom:3.2rem}
 .proj:nth-child(even) .ph{order:2}
-.ph{position:relative;aspect-ratio:16/10;border-radius:1.2rem;overflow:hidden;border:1px solid var(--bd);background:linear-gradient(135deg,#8b5cf633,#f43f5e33),var(--s);box-shadow:0 20px 50px #0008}
-.ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.ph span{position:absolute;inset:0;display:grid;place-items:center;font-size:.8rem;color:#c4b5fd;letter-spacing:.1em;text-transform:uppercase;text-align:center;padding:1rem}
-.proj h3{font-size:1.45rem;margin:.6rem 0}.proj p{margin:.3rem 0;color:var(--mu);font-size:.97rem}.proj p b{color:var(--tx)}
-.fade{opacity:0;transform:translateY(28px) scale(.97);transition:opacity .8s,transform .8s}
-.fade.in{opacity:1;transform:none}
-.tl{display:grid;gap:1.2rem;max-width:800px;margin:auto}.tl .card ul{margin:.6rem 0 0;padding-left:1.1rem;color:var(--mu);font-size:.95rem}
-.row{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}.row small{color:#c4b5fd}
-footer{padding:2rem 0;border-top:1px solid var(--bd);text-align:center;color:var(--mu);font-size:.9rem}
-@media(max-width:780px){.proj{grid-template-columns:1fr}.proj:nth-child(even) .ph{order:0}.links{display:none}}
-@media(prefers-reduced-motion:reduce){.fade{transition:none;opacity:1;transform:none}html{scroll-behavior:auto}}
-</style>
-</head>
-<body>
+.ph{position:relative;aspect-ratio:16/10;border-radius:1.2rem;overflow:hidden;border:1px solid var(--bd);background:linear-gradient(135deg,#8b5cf644,#f43f5e33),var(--s);box-shadow:0 20px 50px #0008}
+.ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:top}
+.ph span{position:absolute;inset:0;display:grid;place-items:center;color:#c4b5fd;font:500 .8rem 'JetBrains Mono',monospace;letter-spacing:.1em;text-transform:uppercase;padding:1rem}
+.proj h3{font-size:1.35rem;margin:.55rem 0 .3rem}.proj p{color:var(--mu);margin:.3rem 0;font-size:.95rem}
+details{margin-top:.7rem;font-size:.92rem;color:var(--mu)}summary{cursor:pointer;color:#c4b5fd;font-weight:600}details p{margin:.5rem 0}
+.lnk{display:inline-block;margin-top:.7rem;color:#fda4af;font-weight:600;font-size:.9rem}.lnk:hover{text-decoration:underline}
+.tl{display:grid;gap:1rem;max-width:820px;margin:auto}.row{display:flex;justify-content:space-between;gap:.8rem;flex-wrap:wrap}.row small{color:#c4b5fd}
+.fade{opacity:0;transform:translateY(26px) scale(.97);transition:opacity .8s,transform .8s}.fade.in{opacity:1;transform:none}
+footer{padding:2rem 0;border-top:1px solid var(--bd);text-align:center;color:var(--mu);font-size:.88rem}
+@media(max-width:820px){.proj{grid-template-columns:1fr}.proj:nth-child(even) .ph{order:0}.links{display:none}}
+@media(prefers-reduced-motion:reduce){.fade{opacity:1;transform:none;transition:none}.term::after{animation:none}html{scroll-behavior:auto}}
+</style></head><body>
+<canvas id="bg"></canvas><div id="spot"></div>
 <header><div class="wrap nav"><b>Ali <i>Al-Kelabi</i></b>
-<nav class="links"><a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#experience">Experience</a><a href="#education">Education</a><a href="#contact">Contact</a></nav>
+<nav class="links"><a href="#about">About</a><a href="#projects">Projects</a><a href="#experience">Experience</a><a href="#research">Research</a><a href="#skills">Skills</a><a href="#education">Education</a><a href="#community">Community</a></nav>
 <a class="btn p" href="#contact" style="padding:.5rem 1.1rem">Reach out</a></div></header>
 <main>
-<section class="hero" id="top"><div class="wrap">
+<section class="hero"><div class="wrap">
 <div class="portrait fade"><div><img src="images/ali.png" alt="Ali Al-Kelabi"></div></div>
-<div class="fade"><span class="tag">AI · Robotics · Automation · Data</span>
+<div class="fade center"><span class="tag">AI & Robotics | Computer Vision | Sensor Systems | Software & Automation</span>
 <h1>Hi, I'm <span class="grad">Ali Al-Kelabi</span></h1>
-<div class="btns"><a class="btn p" href="#projects">View projects</a><a class="btn" href="./Ali_Al-Kelabi_CV.pdf" download>Download CV</a></div>
-<p class="mu" style="font-size:.9rem;margin-top:1.2rem"></p></div>
+<p class="mu" style="max-width:62ch;margin:0 auto">Master's student in Artificial Intelligence for Smart Sensors and Actuators at Deggendorf Institute of Technology, with a Bachelor's in Mechatronics. My work connects AI and software with sensor data, robotics and automation.</p></div>
+<div class="term" id="term"></div>
+<div class="btns"><a class="btn p" href="#projects">View projects</a><a class="btn" href="./Ali_Al-Kelabi_CV.pdf" download>Download CV</a><a class="btn" href="#contact">Contact</a></div>
+<div class="stats" id="stats"></div>
 </div></section>
 
-<section id="about"><div class="wrap">
-<span class="tag">Profile</span><h2>Structured, practical and <span class="grad">responsible</span></h2>
-<p class="mu" style="max-width:62ch;margin:0 auto">M.Eng. student in Artificial Intelligence for Smart Sensors and Actuators, building practical AI, data analytics, robotics and electrical systems for real-world engineering problems — from data preparation and prototyping to testing and documentation.</p>
-<p class="mu sub">I work best on end-to-end systems that connect AI, software and real-world applications. I use AI tools responsibly to move faster and improve quality, while keeping full responsibility for implementation and validation.</p>
-<div class="chips" id="traits"></div>
-<div class="card fade" style="max-width:560px;margin:2rem auto 0;text-align:center;border-color:#8b5cf666"><h3>Availability</h3><p>Available on short notice, ready to start immediately, and willing to relocate.</p></div>
+<section id="about"><div class="wrap"><span class="num">01</span><h2>From mechatronics to <span class="grad">applied AI</span></h2>
+<p class="mu sub">I started in mechatronics, working on sensor measurements, LabVIEW data acquisition and probe development for non-destructive testing, and contributed to a published journal article. Since then I have worked on computer vision, automation teaching materials, web integration and practical AI prototypes. I build understandable, testable systems that connect perception, data processing and useful actions, using incremental validation instead of treating model output as finished.</p>
+<div class="grid" id="tracks"></div>
+<div class="card fade" style="max-width:640px;margin:2rem auto 0;text-align:center;border-color:#8b5cf666"><h3>Availability</h3><p>Open to internships, working-student opportunities and Master's theses in AI, robotics, computer vision, data engineering and automation. Based in Bavaria and willing to relocate for a suitable opportunity. All coursework is completed; only the Master's thesis remains.</p></div>
 </div></section>
 
-<section id="skills"><div class="wrap">
-<span class="tag">Technical skills</span><h2>Applied across <span class="grad">AI, robotics, data</span> and software</h2>
-<p class="mu sub">My stack is strongest where machine learning, engineering systems and implementation quality meet.</p>
-<div class="grid" id="skillgrid"></div>
-</div></section>
+<section id="projects"><div class="wrap"><span class="num">02</span><h2>Selected <span class="grad">projects</span></h2>
+<p class="mu sub">Each project shows its type and status. Prototypes and simulations are labelled as such. Open "Details" for what I implemented, results and limits.</p><div id="projlist"></div></div></section>
 
-<section id="projects"><div class="wrap">
-<span class="tag">Selected projects</span><h2>Projects that connect <span class="grad">models, systems</span> and outcomes</h2>
-<p class="mu sub">Each project shows the context, technologies and practical value delivered.</p>
-<div id="projlist"></div>
-</div></section>
+<section id="experience"><div class="wrap"><span class="num">03</span><h2>Experience: <span class="grad">work, research, teaching</span></h2><br><div class="tl" id="exp"></div></div></section>
 
-<section id="experience"><div class="wrap">
-<span class="tag">Experience</span><h2>Shaped by applied <span class="grad">automation and ML</span></h2><br>
-<div class="tl" id="exp"></div></div></section>
+<section id="research"><div class="wrap"><span class="num">04</span><h2>Published <span class="grad">research</span></h2><br>
+<div class="proj" style="max-width:900px;margin:auto"><div class="ph fade"><img src="images/project-15.png" alt="Corrosion under insulation research" loading="lazy" onerror="this.remove()"><span>Research</span></div>
+<div class="fade"><span class="tag r">Journal article · co-author</span>
+<h3>Machine-Learning-Based Evaluation of Corrosion Under Insulation in Ferromagnetic Structures</h3>
+<p>Sophian A., Nafiah F., Gunawan T. S., Yusof N. A. M., Al-Kelabi A. F. <i>IIUM Engineering Journal</i>, 22(2), 226–233, 4 July 2021.</p>
+<p><b>My contribution:</b> experimental PEC measurements, LabVIEW data acquisition, probe development and data preparation.</p>
+<a class="lnk" href="https://doi.org/10.31436/iiumej.v22i2.1692" target="_blank" rel="noopener">DOI: 10.31436/iiumej.v22i2.1692 →</a></div></div></div></section>
 
-<section id="education"><div class="wrap">
-<span class="tag">Education</span><h2>From mechatronics to <span class="grad">applied AI</span></h2><br>
-<div class="tl">
-<div class="card fade"><div class="row"><h3>M.Eng. Artificial Intelligence for Smart Sensors and Actuators</h3><small>03/2025 – Present</small></div><p>Technische Hochschule Deggendorf (THD) · Machine Learning, Deep Learning, Computer Vision, Data Engineering, Edge Systems, Intelligent Automation.</p></div>
-<div class="card fade"><div class="row"><h3>B.Eng. Mechatronics, with distinction</h3><small>02/2019 – 02/2023</small></div><p>IIUM University Malaysia · Robotics, Automation, Software Engineering, Mathematics.</p></div>
-</div></div></section>
+<section id="skills"><div class="wrap"><span class="num">05</span><h2>Technical <span class="grad">skills</span></h2>
+<p class="mu sub">Grouped by domain, with no claim of equal depth in every tool.</p><div class="grid" id="skillgrid"></div></div></section>
 
-<section id="contact"><div class="wrap">
-<span class="tag">Contact</span><h2>Open to <span class="grad">student roles, internships</span> and working student positions</h2>
-<div class="btns"><a class="btn p" href="./Ali_Al-Kelabi_CV.pdf" download>Download CV</a><a class="btn" href="mailto:ali.alkelabi.engineer@gmail.com">Email</a><a class="btn" href="https://www.linkedin.com/in/ali-al-kelabi-19096b207/" target="_blank" rel="noopener">LinkedIn</a><a class="btn" href="https://github.com/ali76-AFK" target="_blank" rel="noopener">GitHub</a></div>
-</div></section>
+<section id="education"><div class="wrap"><span class="num">06</span><h2>Education, <span class="grad">awards & certificates</span></h2><br><div class="tl" id="edu"></div></div></section>
+
+<section id="community"><div class="wrap"><span class="num">07</span><h2>Leadership, competitions & <span class="grad">community</span></h2><br><div class="grid" id="comm"></div></div></section>
+
+<section id="contact"><div class="wrap"><span class="num">08</span><h2>Let's <span class="grad">talk</span></h2>
+<p class="mu sub">Languages: German B2–C1 · English C2 · Arabic (native). References available on request.</p>
+<div class="btns"><a class="btn p" href="mailto:ali.alkelabi.engineer@gmail.com">Email</a><a class="btn" href="./Ali_Al-Kelabi_CV.pdf" download>Download CV</a><a class="btn" href="https://www.linkedin.com/in/ali-al-kelabi-19096b207/" target="_blank" rel="noopener">LinkedIn</a><a class="btn" href="https://github.com/ali76-AFK" target="_blank" rel="noopener">GitHub</a></div></div></section>
 </main>
-<footer><div class="wrap"><b>Engineer Ali Al-Kelabi</b> · AI, robotics, automation and data analytics portfolio</div></footer>
-
+<footer><div class="wrap"><b>Ali Al-Kelabi</b> · AI, robotics, computer vision and automation portfolio</div></footer>
 <script>
-/* ===== EDIT YOUR CONTENT HERE ===== */
-// Project photos: just drop images/project-1.jpg … project-11.jpg next to index.html (or set img per project). Missing = placeholder.
-const projects=[
-{t:"Gesture based Manipulator control",c:"Industrial Robotics",img:"",o:"Allowing hand gestures and movement to control an arm to do certian tasks with no screen touch or clicks, simulation based.",k:"UR5e arm, ROS 2 Jazzy, Gazebo Harmonic, MoveIt 2, Docker, Machine Learning, computer vision, YOLO",i:"A risk minimizing project for tasks that require human control but machine precision."},
-{t:"AML Alert Triage Copilot",c:"AI Workflow Automation",img:"",o:"AI-assisted AML investigator copilot that ingests transaction-monitoring alerts as JSON and generates a structured triage summary: typology, risk bucket, indicators, false-positive signals, next action, explanation and confidence.",k:"LLM workflow design, prompt engineering, FastAPI, Pydantic, Groq-hosted Llama 3, Streamlit",i:"Combines an LLM backend with a Python rule overlay for safer, explainable decisions. Explicitly human-in-the-loop: the model supports triage, the investigator decides."},
-{t:"Industrial Telemetry Anomaly Detection",c:"Industrial pipeline",img:"",o:"This project demonstrates a production-style predictive maintenance and industrial monitoring workflow.",k:"n8n, Python, SQLite, Docker, JSON payloads and Grafana.",i:"The system is designed to reflect realistic needs in automotive, Industry 4.0, and manufacturing environments."},
-{t:"CampaignPulse – Analytics Dashboard",c:"Ecommerce Analytics",img:"",o:"Product-oriented analytics dashboard for purchase, funnel and KPI data, with separated front end, API routing, service layer and cloud data retrieval plus a mock fallback for local development.",k:"React 18, Vite, Recharts, FastAPI, Docker, Uvicorn, Pydantic, BigQuery",i:"A professional interface for non-technical stakeholders, demonstrating data analytics, API design and product thinking under minimal-budget constraints."},
-{t:"Diabetic Retinopathy Detection",c:"Healthcare AI",img:"",o:"ML/DL system to detect diabetic retinopathy and estimate severity from medical image datasets.",k:"Python, TensorFlow/Keras, image preprocessing, data augmentation",i:"A practical healthcare AI prototype for image-based classification."},
-{t:"Industrial Telemetry Ingestion Desktop App",c:"Data Processing",img:"",o:"Desktop application for processing industrial telemetry data using C++ and Qt Widgets, connected to Microsoft SQL Server via ODBC.",k:"C++, Qt Widgets, ODBC, MS SQL Server, CSV processing",i:"Practical ingestion solution with validation, database connectivity, logging and structured documentation of requirements, data flows and error cases."},
-{t:"Forest Fire Detection and Monitoring",c:"Safety",img:"",o:"It is a deep learning based forest fire monitoring system that analysis satelite images to detect wild fire and reporting.",k:"Python, TensorFlow/Keras, image preprocessing, data augmentation",i:"A practical easy access prototype system for image-based classification."},
-{t:"Rag Local Research Assistant",c:"LLM and Data analysis",img:"",o:"Privacy-first local RAG desktop assistant for PDF and text document analysis.",k:"PyQt6, Qwen2.5, Python, PyMuPDF",i:"The project demonstrates practical LLM integration, local inference, desktop UI engineering, and privacy-oriented application design."},
-{t:"Gesture Password Access Control",c:"Safety",img:"",o:"Gesture-based access control prototype using MediaPipe hand tracking.",k:"Python Tkinter, OpenCV, MediaPipe, TensorFlow, Keras, GRU, Flask, ngrok",i:"This project implements a gesture-based password system that combines computer vision, sequence modeling, and a local desktop interface."},
-{t:"IoT Anomaly Detection – PySpark Pipeline",c:"Scalable Data",img:"",o:"Scalable pipeline for processing large sensor datasets and detecting anomalies with statistical methods.",k:"PySpark, Python, Docker, Linux, Z-score anomaly detection",i:"Scalable, containerized and reproducible analysis of sensor data."},
-{t:"ROS-Based UR5 Robotic Arm",c:"Robotics",img:"",o:"ROS-based UR5 arm in simulation with HSV-based object detection and pick-and-place-style motion planning.",k:"ROS1 Kinetic, MoveIt, Gazebo, Python/C++, HSV segmentation, 2D camera, Ubuntu 16.04",i:"A perception-to-action robotics pipeline combining computer vision and motion planning."},
-{t:"System Communication & Control with Edge Devices",c:"Embedded Systems",img:"",o:"Distributed system of two Raspberry Pi devices for communication and control over LoRa.",k:"Raspberry Pi, Python, Ubuntu, LoRa, edge computing",i:"Practical experience in distributed embedded systems and remote communication."},
-{t:"Robotics Task Orchestrator",c:"Industrial Robotics",img:"",o:"Automating and controlling an arm manipulator through normal human text via an LLM but analysing the robot movements via a VLA.",k:"Python, C++, Groq LLM, LangGraph, VLA, MoveIt, CMake, Streamlit, ROS 2",i:"Supports easier human interaction and possibility fit according to provided parameters and requests."},
-{t:"Newsletter Orchestrator",c:"Automation",img:"",o:"LLM based Automation workflow for news collection, summarization and delivery tasks, including scraping, subscribers, human-in-the-loop and routine data handling.",k:"FastAPI, Streamlit, PostgreSQL, LangGraph workflows, Mailpit and Groq API LLM",i:"Reduced manual effort through process automation."},
-{t:"ML & Sensordata Analysis for Corrosion Detection",c:"Research",img:"",o:"Research-oriented project using sensor data for anomaly and corrosion detection.",k:"Python, machine learning libraries, sensor data analysis, visualization",i:"Supported condition-monitoring and fault-detection research."}];
-const skills=[
-["Programming & development","Python, C#, Bash, basic JavaScript, API workflows, Linux, Git.",["Python","C#","Bash","Git","Linux"]],
-["AI, deep & machine learning","Model development and evaluation, image classification, sequence models, anomaly detection, computer vision.",["TensorFlow","Keras","PyTorch familiarity","YOLO","LLM / RAG","AI agents"]],
-["Data & analytics","Structured analysis, PySpark pipelines, workflow automation, reproducible processing, reporting.",["PySpark","Pandas","NumPy","CVAT","LabelImg"]],
-["Robotics & engineering","Simulation, robot control, perception-to-action pipelines, motion planning, ROS workflows.",["ROS1","ROS2 familiarity","MoveIt","Gazebo","UR5"]],
-["Tools & platforms","Dockerized environments, Jupyter, Raspberry Pi, Ubuntu, lightweight backends.",["Docker","Ubuntu","Jupyter","Flask","FastAPI","Streamlit"]],
-["Working style","Rapid prototyping, documentation, disciplined implementation, responsible AI tool use.",["Prototyping","Documentation","Validation mindset","Teamwork"]]];
-const exp=[
-["Werkstudent – UiPath & C# Automation","Deggendorf Institute of Technology, Germany","06/2025 – 11/2025",["Developed a UiPath automation course with practical use cases.","Implemented web scraping for automated data pipelines.","Supported process optimization through automation."]],
-["Project Collaboration – ML & Computer Vision","ICON, Remote, Malaysia","03/2024 – 07/2024",["DL (YOLO) and ML project detecting violations in public spaces, storing plate and route data in databases for tracking.","Second use case (OCR) for locomotive detection and extraction of visible and size-related information.","Supported Python training, data preparation and labeling with CVAT and LabelImg."]],
-["Student Assistant – ML & Sensordata Analysis","IIUM / Malaysian Nuclear Agency, Malaysia","11/2019 – 02/2023",["Designed and customized 3D PEC probes for non-destructive material testing.","Ran pulsed eddy current tests on ferromagnetic plates with an electrical measurement chain and LabVIEW.","Analyzed signals for detecting corrosion under insulation."]]];
-["High initiative","Fast onboarding","Work well under pressure","Pragmatic problem solving","Clean documentation","Responsible AI tool use","Interdisciplinary collaboration"].forEach(x=>traits.innerHTML+=`<span class="chip">${x}</span>`);
-skillgrid.innerHTML=skills.map(s=>`<div class="card fade"><h3>${s[0]}</h3><p>${s[1]}</p><div class="chips">${s[2].map(c=>`<span class="chip">${c}</span>`).join("")}</div></div>`).join("");
-projlist.innerHTML=projects.map((p,n)=>`<article class="proj"><div class="ph fade"><span>Project photo ${n+1}<br>images/project-${n+1}.png</span><img src="${p.img||`images/project-${n+1}.png`}" alt="${p.t}" loading="lazy" onerror="this.remove()"></div><div class="fade"><span class="tag">${p.c}</span><h3>${p.t}</h3><p><b>Overview:</b> ${p.o}</p><p><b>Technologies:</b> ${p.k}</p><p><b>Impact:</b> ${p.i}</p></div></article>`).join("");
-
-</script>
-<script>
-document.getElementById("exp").innerHTML=exp.map(e=>`<div class="card fade"><div class="row"><div><h3>${e[0]}</h3><p>${e[1]}</p></div><small>${e[2]}</small></div><ul>${e[3].map(x=>`<li>${x}</li>`).join("")}</ul></div>`).join("");
-// fade in AND out while scrolling
-const io=new IntersectionObserver(es=>es.forEach(e=>e.target.classList.toggle("in",e.isIntersecting)),{threshold:.15});
+const H="https://github.com/ali76-AFK/";
+const P=[
+["Gesture-Controlled UR5e Pick-and-Place","Personal project · simulation",1,"Integrated a UR5e, RGB-D camera, MoveIt 2, gesture recognition and a browser dashboard in simulation.","ROS 2,Gazebo,MoveIt 2,OpenCV,MediaPipe,Docker","Implemented HSV-based object detection, depth-based 3D point estimation and image-to-world mapping. Click-to-point control turns an image click into a 3D target, checked with collision-aware inverse kinematics. Simulation testing: maximum object-position error 2 mm (x/y) and 1 mm (z). Simulation only, not validated on a physical robot.","gesture_arm"],
+["YOLOv8 Object Detection with ROS 2 & Gazebo","Project · simulation",0,"Integrated a YOLOv8 inference pipeline into a ROS 2/Gazebo environment and published detections as structured ROS 2 messages.","ROS 2,Gazebo,YOLOv8,Python","Processed camera images and analysed the link between camera streams, inference and downstream robot control. No accuracy or latency figures are claimed.",""],
+["Industrial Telemetry & Anomaly Detection","Personal project",3,"Built a pipeline for structured sensor-data processing and compared Z-score and Isolation Forest anomaly detection.","Python,PySpark,SQL,Isolation Forest,Docker","Automated identification of abnormal measurements and developed evaluation and alerting logic. Prototype; not an operational factory deployment.","Industrial-Telemetry-Anomaly-Detection-Workflow-Automation"],
+["Industrial Telemetry & Control System","Project · embedded / IoT",12,"Distributed sensor-and-control system on Raspberry Pi with LoRa communication (RFM95W, 868 MHz).","Python,Raspberry Pi,Ubuntu,SQL,LoRa","Includes UV-intensity measurements, rule-based control of roller blinds and an LED, and a touchscreen GUI with sensor graphs, system status, UV sensitivity and alerts.",""],
+["Diabetic Retinopathy Detection","Project / case study",5,"Pipeline for automated classification and grading of diabetic retinopathy from retinal fundus images.","Python,TensorFlow/Keras,OpenCV,ResNet-50,DenseNet-121","Applied circular cropping, green-channel extraction, Ben Graham normalisation and augmentation; used weighted focal and class-weighted losses; compared ResNet-50 classification with DenseNet-121 ordinal regression (QWK, macro recall/F1, accuracy). Not clinically validated.","Diabetic-Retinopathy-Detection"],
+["AML Alert Triage Copilot","Prototype",2,"LLM-assisted triage of synthetic AML alerts with structured, validated output and human-in-the-loop review.","Python,FastAPI,Streamlit,Pydantic,LLMs","Streamlit sends alerts to FastAPI and an LLM; Pydantic validates the JSON; recommendations stay transparent and traceable. Synthetic data; not a production compliance system.","AML-Alert-Triage-Copilot"],
+["Local RAG Knowledge Assistant","Prototype",8,"Local assistant that uses personal notes and documents as a knowledge base.","Python,PyTorch,Hugging Face,Chroma,FastAPI,Docker","Implemented document processing, retrieval, prompt structuring and answer generation, and analysed retrieval quality and answers.","Local-Research-Assistant"],
+["CampaignPulse – E-commerce Analytics Dashboard","Personal project",4,"Turns GA4 event data into purchase, revenue and funnel metrics with interactive visualisations.","Python,FastAPI,GA4,Streamlit,Plotly","Built event-processing pipelines and dashboards for adoption, engagement and conversion patterns.","CampaignPulse"],
+["AI Agentic Workflow for Robot Task Control","In development",13,"Workflow concept to translate natural-language instructions into robot-manipulation actions.","LangGraph,n8n,ROS 2,Gazebo,LLMs","Structuring multistep workflows and working toward camera-based task verification. Components are still in progress; no end-to-end autonomy is claimed.",""],
+["Aerial Fire Detection with MobileNetV2","University course project · team of four · 10/2025–01/2026",7,"Binary wildfire/no-wildfire classification of satellite images, comparing a VGG16 baseline with MobileNetV2.","Python,TensorFlow/Keras,MobileNetV2,Scikit-learn,Streamlit","My part: preprocessing, MobileNetV2 work, training, evaluation, report and presentation. Course report only; accuracy figures to be verified before citing. No operational deployment.",""],
+["AI Newsletter Automation","Personal project",14,"LLM-based workflow for news collection, summarisation and delivery with human-in-the-loop review.","FastAPI,Streamlit,PostgreSQL,LangGraph,Groq API","Includes scraping, subscriber handling and routine data processing. See the repository for details.","AI-newsletters_automation"],
+["Gesture Password Access Control","Prototype",9,"Gesture-based access-control prototype using MediaPipe hand tracking.","Python,MediaPipe,OpenCV,TensorFlow/Keras,GRU,Tkinter,Flask","Combines computer vision, sequence modelling and a local desktop interface.","Gesture-Password-Access-Control"],
+["UR5 Manipulation with ROS 1 & Colour Recognition","Project · simulation",11,"ROS-based UR5 arm in simulation with HSV colour detection and pick-and-place-style motion planning.","ROS 1 Kinetic,MoveIt,Gazebo,Python/C++,Ubuntu 16.04","Earlier robotics project combining a 2D camera, HSV segmentation and motion planning.","UR5-Manipulator-with-Ubuntu-16.04-ROS1-kinetic-and-color-Recognition"]];
+const E=[
+["Working Student – UiPath & C# Automation","Technische Hochschule Deggendorf, Germany","06/2025 – 11/2025","Employment",["Developed a UiPath automation course with practical use cases.","Implemented web-scraping solutions for automated data pipelines.","Supported process optimisation through structured automation."]],
+["Project Collaboration – Machine Learning & Computer Vision","ICON, Malaysia","03/2024 – 07/2024","Project collaboration",["Worked on a YOLO-based project for camera-based violation detection; results were transferred to databases for tracking.","Supported a second use case: OCR, object detection and extraction of visible and size-related features.","Supported Python-based training, data preparation and annotation (CVAT, LabelImg)."]],
+["German Lecturer","4C, Jordan","10/2023 – 07/2024","Employment",["Taught German at A1–B1 levels."]],
+["Paid Engineering Internship – Mechatronics","SURECO SDN. BHD., Malaysia","8 weeks, 07–09/2022","Internship",["Student-team leader in a student–industry engineering investigation of a vortex-generator / engine-configuration concept, aimed at lower fuel consumption.","Coordinated requirements and technical reports, supported development and handled equipment under academic and industry supervision."]],
+["Student Research Assistant – ML & Sensor Data Analysis","IIUM University Malaysia / Malaysian Nuclear Agency","11/2019 – 02/2023","Research",["Pulsed-Eddy-Current measurements, LabVIEW data acquisition, probe design and adaptation, and data preparation for non-destructive testing.","Related research: eddy-current sensor for welding inspection (01/2022 – 01/2023)."]],
+["Voluntary Web Development Project","Laimoon-associated team, remote","From 13 Nov 2020, one month","Volunteer · training-based",["Developed a student registration form and connected frontend, backend and database (HTML, CSS, JavaScript, Node.js, Python, REST, PostgreSQL)."]]];
+const S=[["Programming","Python,C/C++,C#,JavaScript,SQL,Bash,Git,Docker,Linux"],["AI & ML","PyTorch,TensorFlow/Keras,Hugging Face,YOLOv8,OpenCV,Transfer learning"],["LLM & automation","RAG,LangGraph,n8n,Prompt engineering,Structured JSON,Human-in-the-loop,UiPath"],["Data & analytics","Pandas,NumPy,PySpark,PostgreSQL,MS SQL Server,Grafana,Anomaly detection"],["Robotics","ROS 2,ROS 1,Gazebo,MoveIt 2,UR5e (simulation),RGB-D perception"],["Apps & web","FastAPI,Streamlit,Plotly,React,Vue.js,Node.js,REST APIs"],["Embedded & sensors","Arduino,Raspberry Pi,ESP32,Jetson Nano,LoRa,LabVIEW,Pulsed Eddy Current"]];
+const D=[["M.Eng. Artificial Intelligence for Smart Sensors and Actuators","Deggendorf Institute of Technology · from 03/2025 · fourth semester","Only the Master's thesis remains. Current German grade average: 2.4. Focus: Machine Learning, Deep Learning, Computer Vision, Sensor systems, Big Data, Edge devices, Intelligent automation."],["B.Eng. Mechatronics, with distinction","IIUM University Malaysia · 02/2019 – 02/2023","German-equivalent grade: 2.0. Research focus: Pulsed Eddy Current, signal processing and sensor testing."],["Awards & scholarship","","Dean's List (twice, 2019–2020) · IIUM Ummatic Scholarship (2020–2022) · 2nd place, EDUTECH 2021 (team member) · 2nd place, IIUM Intelligent Control CNN Traffic-Control Competition, 12/2022 (team leader)"],["Certificates","","IBM: Python for Data Science and AI (07/2024) · IIUM: Professional Certificate of Deep Learning in Video Analytics and Computer Vision (12/2022) · NVIDIA: Getting Started with AI on Jetson Nano, Certificate of Competency (12/2022) · Laimoon: The Ultimate Guide to Serverless JavaScript Development on AWS (11/2020)"]];
+const C=[["Co-founder – Arobot","08/2021 – 08/2024 · voluntary student initiative","Seminars, workshops and Arduino/Raspberry Pi projects for about 150 participants. I handled project development, illustrations, technical content checks, post design and video editing."],["Robocon University Team","04/2021 – 02/2023 · IIUM, voluntary","Electronics, coding and testing for an arrow-shooting robot with mecanum mobility."],["IoT Hydroponic System","10/2021 – 05/2022 · team leader","Arduino/ESP32 system with pH, turbidity, humidity and water-level sensors, calibration and Wi-Fi remote control."],["Attendance Recognition App","10 – 12/2022 · team leader","Deep-learning attendance recognition on NVIDIA Jetson Nano (PyTorch) for an IIUM competition."],["Water Quality Measurement with GPS","11/2019 – 02/2020 · competition","Arduino with turbidity, pH and GPS sensors; calibration and debugging of readings."],["Design & Photography Volunteer","02/2021 – 02/2022 · IIUM Student Association","Graphic design, event photography and communication support."]];
+const T=[["Industrial AI & sensors","Automation, sensor analytics and predictive-maintenance-related applications."],["Computer vision & robotics","Perception, simulation and manipulation with ROS 2."],["AI applications & data","LLM integration, workflow automation and data engineering."]];
+const $=id=>document.getElementById(id),ch=s=>s.split(",").map(x=>`<span class="chip">${x}</span>`).join("");
+$("stats").innerHTML=[["M.Eng. AI","4th semester, thesis next"],["Co-author","Journal article, 2021"],["2× 2nd place","Student competitions"],["Mechatronics + AI","Sensors to software"]].map(s=>`<div class="stat fade"><b>${s[0]}</b><span>${s[1]}</span></div>`).join("");
+$("tracks").innerHTML=T.map(t=>`<div class="card fade"><h3>${t[0]}</h3><p>${t[1]}</p></div>`).join("");
+$("projlist").innerHTML=P.map(p=>`<article class="proj"><div class="ph fade"><span>${p[1].split(" ·")[0]}</span>${p[2]?`<img src="images/project-${p[2]}.png" alt="${p[0]}" loading="lazy" onerror="this.remove()">`:""}</div><div class="fade"><span class="tag">${p[1]}</span><h3>${p[0]}</h3><p>${p[3]}</p><div class="chips">${ch(p[4])}</div><details><summary>Details, results & limits</summary><p>${p[5]}</p></details>${p[6]?`<a class="lnk" href="${H}${p[6]}" target="_blank" rel="noopener">View repository →</a>`:""}</div></article>`).join("");
+$("exp").innerHTML=E.map(e=>`<div class="card fade"><div class="row"><div><span class="tag r">${e[3]}</span><h3>${e[0]}</h3><p>${e[1]}</p></div><small>${e[2]}</small></div><ul>${e[4].map(x=>`<li>${x}</li>`).join("")}</ul></div>`).join("");
+$("skillgrid").innerHTML=S.map(s=>`<div class="card fade"><h3>${s[0]}</h3><div class="chips">${ch(s[1])}</div></div>`).join("");
+$("edu").innerHTML=D.map(d=>`<div class="card fade"><h3>${d[0]}</h3>${d[1]?`<p><small style="color:#c4b5fd">${d[1]}</small></p>`:""}<p>${d[2]}</p></div>`).join("");
+$("comm").innerHTML=C.map(c=>`<div class="card fade"><h3>${c[0]}</h3><p><small style="color:#c4b5fd">${c[1]}</small></p><p>${c[2]}</p></div>`).join("");
+// typed terminal
+const L=["open to: internships","open to: working-student roles","open to: Master's thesis","focus: AI · computer vision · sensors · automation"],t=$("term");let li=0,ci=0,dir=1;
+function type(){const s=L[li];ci+=dir;t.textContent="> "+s.slice(0,ci);if(dir>0&&ci>=s.length){dir=-1;return setTimeout(type,1600)}if(dir<0&&ci<=0){dir=1;li=(li+1)%L.length}setTimeout(type,dir>0?55:25)}
+matchMedia("(prefers-reduced-motion:reduce)").matches?t.textContent="> "+L[0]:type();
+// particle network (violet/red)
+(()=>{const c=$("bg"),x=c.getContext("2d");let w,h,ps=[],m={x:-999,y:-999};
+const rs=()=>{w=c.width=innerWidth;h=c.height=innerHeight;ps=Array.from({length:Math.min(80,Math.floor(w*h/22000))},(_,i)=>({x:Math.random()*w,y:Math.random()*h,vx:(Math.random()-.5)*.35,vy:(Math.random()-.5)*.35,c:i%3?"139,92,246":"244,63,94"}))};
+function f(){x.clearRect(0,0,w,h);for(const p of ps){p.x+=p.vx;p.y+=p.vy;if(p.x<0||p.x>w)p.vx*=-1;if(p.y<0||p.y>h)p.vy*=-1;x.fillStyle=`rgba(${p.c},.7)`;x.beginPath();x.arc(p.x,p.y,1.6,0,6.3);x.fill()}
+for(let i=0;i<ps.length;i++){for(let j=i+1;j<ps.length;j++){const a=ps[i],b=ps[j],d=Math.hypot(a.x-b.x,a.y-b.y);if(d<130){x.strokeStyle=`rgba(${a.c},${.22*(1-d/130)})`;x.beginPath();x.moveTo(a.x,a.y);x.lineTo(b.x,b.y);x.stroke()}}
+const d=Math.hypot(ps[i].x-m.x,ps[i].y-m.y);if(d<160){x.strokeStyle=`rgba(244,63,94,${.4*(1-d/160)})`;x.beginPath();x.moveTo(ps[i].x,ps[i].y);x.lineTo(m.x,m.y);x.stroke()}}
+if(!matchMedia("(prefers-reduced-motion:reduce)").matches)requestAnimationFrame(f)}
+rs();f();addEventListener("resize",rs);addEventListener("pointermove",e=>{m={x:e.clientX,y:e.clientY};document.documentElement.style.setProperty("--x",e.clientX+"px");document.documentElement.style.setProperty("--y",e.clientY+"px")})})();
+// fade in AND out on scroll
+const io=new IntersectionObserver(es=>es.forEach(e=>e.target.classList.toggle("in",e.isIntersecting)),{threshold:.12});
 document.querySelectorAll(".fade").forEach(el=>io.observe(el));
-</script>
-<script src="lang.js"></script>
-</body></html>
+</script></body></html>
