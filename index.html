@@ -168,8 +168,21 @@ function render(){
  document.querySelectorAll("[data-i]").forEach(e=>{e._e??=e.innerHTML;e.innerHTML=u[e.dataset.i]??e._e});
  document.title=u.title||"Ali Al-Kelabi | AI & Robotics · Computer Vision · Sensor Systems · Automation";
  document.querySelector('meta[name=description]').content=u.meta||"Ali Al-Kelabi – M.Eng. student in AI for Smart Sensors and Actuators. Open to internships, working-student roles and Master's theses.";
- document.querySelectorAll(".cv").forEach(a=>a.href=lang==="de"?"./Ali_Al-Kelabi_CV_DE.pdf":"./Ali_Al-Kelabi_CV.pdf");
- const lb=$("lang");lb.textContent=lang==="de"?"English":"Deutsch";lb.setAttribute("aria-label",lang==="de"?"Switch language to English":"Sprache auf Deutsch wechseln (Switch language to German)");lb.lang=lang==="de"?"en":"de";
+// Set the correct CV download according to the selected language
+document.querySelectorAll(".cv").forEach(a => {
+    const isGerman = lang === "de";
+
+    a.href = isGerman
+        ? "./Ali_Al_Kelabi_CV_DE.pdf"
+        : "./Ali_Al_Kelabi_CV.pdf";
+
+    a.setAttribute(
+        "download",
+        isGerman
+            ? "Ali_Al_Kelabi_CV_DE.pdf"
+            : "Ali_Al_Kelabi_CV.pdf"
+    );
+}); const lb=$("lang");lb.textContent=lang==="de"?"English":"Deutsch";lb.setAttribute("aria-label",lang==="de"?"Switch language to English":"Sprache auf Deutsch wechseln (Switch language to German)");lb.lang=lang==="de"?"en":"de";
  $("burger").setAttribute("aria-label",lang==="de"?"Menü öffnen":"Open menu");
  $("pimg").alt=lang==="de"?"Porträt von Ali Al-Kelabi":"Portrait of Ali Al-Kelabi";
  $("stats").innerHTML=ST.map((s,i)=>M(s,(d.ST||[])[i])).map(s=>`<div class="stat fade"><b>${s[0]}</b><span>${s[1]}</span></div>`).join("");
