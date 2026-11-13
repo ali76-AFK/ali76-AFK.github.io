@@ -221,7 +221,7 @@ function f(t){x.clearRect(0,0,w,h);
 const rs=()=>{const d=Math.min(devicePixelRatio||1,2);w=innerWidth;h=innerHeight;c.width=w*d;c.height=h*d;x.setTransform(d,0,0,d,0,0);
  if(RM){fr=[];nx=1e12;for(let i=0;i<8;i++)spawn(0);fr.forEach(p=>p.life=1e12);f(5000)}};
 rs();if(!RM)requestAnimationFrame(f);addEventListener("resize",rs);
-addEventListener("pointerdown",e=>{if(RM)return;const t=performance.now();bu=t+500;
+addEventListener("pointerdown",e=>{if(RM)return;const t=performance.now();bu=t+700;
  for(let i=0;i<4;i++){const a=Math.random()*6.283,r=30+Math.random()*110;fr.push({s:W[Math.random()*W.length|0],x:Math.max(0,Math.min(w-80,e.clientX+Math.cos(a)*r)),y:Math.max(20,Math.min(h-10,e.clientY+Math.sin(a)*r)),t0:t,life:320+Math.random()*180,c:Math.random()<.5?"196,181,253":"244,63,94",z:11+(Math.random()*5|0),nf:1e12})}});
 addEventListener("pointermove",e=>{document.documentElement.style.setProperty("--x",e.clientX+"px");document.documentElement.style.setProperty("--y",e.clientY+"px")})})();
 
