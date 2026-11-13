@@ -23,7 +23,7 @@ k2:"Nach Bereichen gruppiert, ohne gleiche Tiefe in jedem Werkzeug zu behaupten.
 e1:"Ausbildung, <span class=\"grad\">Auszeichnungen & Zertifikate</span>",
 c1:"Führung, Wettbewerbe & <span class=\"grad\">Engagement</span>",
 t1:"Lassen Sie uns <span class=\"grad\">sprechen</span>",
-t2:"Sprachen: Deutsch: B2–C1 · English: C2 · Arabisch: Muttersprache. Referenzen auf Anfrage.",
+t2:"Sprachen: Deutsch: B2–C1 · English: C2 · Referenzen auf Anfrage.",
 tm:"E-Mail",
 ft:"<b>Ali Al-Kelabi</b> · Portfolio für KI, Robotik, Computer Vision und Automatisierung",
 sum:"Details, Ergebnisse & Grenzen",repo:"Repository ansehen"},
