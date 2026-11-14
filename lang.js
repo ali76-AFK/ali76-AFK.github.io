@@ -58,7 +58,7 @@ E:[
 ["Ehrenamtliches Webentwicklungsprojekt","Team im Umfeld von Laimoon, remote","ab 13.11.2020, ein Monat","Ehrenamt · schulungsbasiert",["Entwicklung eines Anmeldeformulars für Studierende und Anbindung von Frontend, Backend und Datenbank (HTML, CSS, JavaScript, Node.js, Python, REST, PostgreSQL)."]]],
 S:[["Programmierung"],["KI & ML"],["LLM & Automatisierung"],["Daten & Analytik"],["Robotik"],["Apps & Web"],["Embedded & Sensorik"]],
 D:[
-[null,"Technische Hochschule Deggendorf · ab 03/2025 · 4. Semester",["Status: laufend; alle Studienleistungen erbracht, die Masterarbeit steht noch aus","Aktueller Notendurchschnitt: 2,4 (deutsche Skala, keine Abschlussnote)","Schwerpunkte: Machine Learning, Deep Learning, Computer Vision, Sensorsysteme, Big Data, Edge-Geräte, intelligente Automatisierung"]],
+[null,"Technische Hochschule Deggendorf · ab 03/2025 · 4. Semester",["Status: laufend; alle Studienleistungen erbracht, die Masterarbeit steht noch aus","Schwerpunkte: Machine Learning, Deep Learning, Computer Vision, Sensorsysteme, Big Data, Edge-Geräte, intelligente Automatisierung"]],
 ["B.Eng. Mechatronik",null,["Abschluss mit Auszeichnung","Deutsches Notenäquivalent: 2,0","Forschungsschwerpunkte: Pulsed Eddy Current, Signalverarbeitung, Sensortests, Entwicklung 3D-gedruckter Messsonden"]],
 ["Auszeichnungen & Stipendium",null,["Dean's List (zweimal, 2019–2020)","IIUM Ummatic Scholarship (2020–2022)","2. Platz, EDUTECH 2021 (Teammitglied)","2. Platz, IIUM Intelligent Control CNN Traffic-Control Competition, 12/2022 (Teamleiter)"]],
 ["Zertifikate",null,["IBM: Python for Data Science and AI (07/2024, ohne Ablaufdatum)","IIUM: Professional Certificate of Deep Learning in Video Analytics and Computer Vision (12/2022)","NVIDIA: Getting Started with AI on Jetson Nano, Certificate of Competency (12/2022)","Laimoon: The Ultimate Guide to Serverless JavaScript Development on AWS (11/2020)"]],
@@ -67,7 +67,7 @@ C:[
 ["Mitgründer – Arobot","08/2021 – 08/2024 · ehrenamtliche Studierendeninitiative","Seminare, Workshops und Arduino-/Raspberry-Pi-Projekte für rund 150 Teilnehmende. Ich war für Projektentwicklung, Illustrationen, fachliche Inhaltsprüfung, Post-Gestaltung und Videoschnitt zuständig."],
 ["Robocon-Universitätsteam","04/2021 – 02/2023 · IIUM, ehrenamtlich","Elektronik, Programmierung und Tests für einen pfeilschießenden Roboter mit Mecanum-Antrieb."],
 ["IoT-Hydrokultursystem","10/2021 – 05/2022 · Teamleiter","Arduino-/ESP32-System mit pH-, Trübungs-, Feuchte- und Wasserstandssensoren, Kalibrierung und WLAN-Fernsteuerung."],
-["Anwesenheitserkennungs-App","10 – 12/2022 · Teamleiter","Deep-Learning-Anwesenheitserkennung auf NVIDIA Jetson Nano (PyTorch) für einen IIUM-Wettbewerb."],
+["Anwesenheit-App","10 – 12/2022 · Teamleiter","Deep-Learning-Anwesenheitserkennung auf NVIDIA Jetson Nano (PyTorch) für einen IIUM-Wettbewerb."],
 ["Wasserqualitätsmessung mit GPS","11/2019 – 02/2020 · Wettbewerb","Arduino mit Trübungs-, pH- und GPS-Sensoren; Kalibrierung und Fehlersuche bei den Messwerten."],
 ["Freiwillige Grafik & Fotografie","02/2021 – 02/2022 · IIUM Student Association","Grafikdesign, Eventfotografie und Unterstützung der Veranstaltungskommunikation."]]
 };
